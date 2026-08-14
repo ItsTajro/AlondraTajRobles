@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
-        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
 
@@ -29,6 +31,7 @@
             --dark: #221713;
             --white: #FFFFFF;
             --light-orange: #FFE2C2;
+            --peach: #F3C5A3;
         }
 
 
@@ -80,7 +83,7 @@
             width: 100%;
             z-index: 1000;
 
-            background: rgba(255, 248, 235, 0.92);
+            background: rgba(255, 248, 235, 0.93);
             backdrop-filter: blur(12px);
 
             border-bottom: 1px solid rgba(34, 23, 19, 0.08);
@@ -106,9 +109,10 @@
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 25px;
             list-style: none;
-            font-size: .9rem;
+
+            font-size: .88rem;
             font-weight: 600;
         }
 
@@ -118,6 +122,45 @@
 
         .nav-links a:hover {
             color: var(--orange);
+        }
+
+
+        /* ==============================
+           BUTTONS
+        ============================== */
+
+        .buttons {
+            margin-top: 40px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 24px;
+
+            border: 2px solid var(--dark);
+
+            font-weight: 700;
+            font-size: .9rem;
+
+            transition: .3s;
+        }
+
+        .button-primary {
+            background: var(--dark);
+            color: white;
+        }
+
+        .button:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: white;
+
+            transform: translateY(-3px);
         }
 
 
@@ -207,7 +250,7 @@
         }
 
         .hero-description {
-            max-width: 720px;
+            max-width: 760px;
 
             font-size: 1.3rem;
             line-height: 1.7;
@@ -218,6 +261,7 @@
         .hero-details {
             display: flex;
             flex-wrap: wrap;
+
             gap: 10px 25px;
 
             font-size: .9rem;
@@ -230,46 +274,7 @@
 
 
         /* ==============================
-           BUTTONS
-        ============================== */
-
-        .buttons {
-            margin-top: 40px;
-
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .button {
-            display: inline-block;
-
-            padding: 14px 24px;
-
-            border: 2px solid var(--dark);
-
-            font-weight: 700;
-            font-size: .9rem;
-
-            transition: .3s;
-        }
-
-        .button-primary {
-            background: var(--dark);
-            color: white;
-        }
-
-        .button:hover {
-            background: var(--orange);
-            border-color: var(--orange);
-            color: white;
-
-            transform: translateY(-3px);
-        }
-
-
-        /* ==============================
-           STATISTICS
+           STATS
         ============================== */
 
         .stats {
@@ -308,13 +313,12 @@
             font-size: .8rem;
 
             text-transform: uppercase;
-
             letter-spacing: 2px;
         }
 
 
         /* ==============================
-           SECTIONS
+           GENERAL SECTIONS
         ============================== */
 
         section {
@@ -327,7 +331,6 @@
             font-size: .75rem;
 
             text-transform: uppercase;
-
             letter-spacing: 4px;
 
             font-weight: 700;
@@ -344,7 +347,7 @@
 
             letter-spacing: -2px;
 
-            max-width: 850px;
+            max-width: 900px;
 
             margin-bottom: 60px;
         }
@@ -356,17 +359,18 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1.3fr .7fr;
 
-            gap: 90px;
+            grid-template-columns: 1.05fr .95fr;
 
-            align-items: start;
+            gap: 70px;
+
+            align-items: center;
         }
 
         .about-lead {
             font-family: "Playfair Display", serif;
 
-            font-size: 2.1rem;
+            font-size: 2rem;
 
             line-height: 1.35;
 
@@ -379,24 +383,73 @@
             font-size: 1.05rem;
         }
 
-        .about-card {
+        .about-visual {
+            position: relative;
+        }
+
+        .about-image-wrap {
+            position: relative;
+
+            max-width: 480px;
+
+            margin: auto;
+        }
+
+        .about-image-wrap::before {
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
             background: var(--yellow);
 
-            padding: 45px;
+            left: 20px;
+            top: 20px;
 
-            transform: rotate(2deg);
+            z-index: 0;
+        }
+
+        .about-image {
+            position: relative;
+            z-index: 1;
+
+            width: 100%;
+
+            object-fit: cover;
+
+            border: 3px solid var(--dark);
+        }
+
+        .about-card {
+            position: relative;
+            z-index: 2;
+
+            background: var(--orange);
+            color: white;
+
+            padding: 30px;
+
+            width: 85%;
+
+            margin: -45px auto 0;
+
+            transform: rotate(-2deg);
+
+            box-shadow: 0 15px 30px rgba(34,23,19,.12);
         }
 
         .about-card h3 {
             font-family: "Playfair Display", serif;
 
-            font-size: 2rem;
+            font-size: 1.8rem;
 
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .about-card p {
-            margin-bottom: 10px;
+            margin-bottom: 7px;
         }
 
 
@@ -449,7 +502,7 @@
         }
 
         .experience-content p {
-            max-width: 750px;
+            max-width: 760px;
         }
 
         .tags {
@@ -475,7 +528,7 @@
 
 
         /* ==============================
-           FEATURED STORY
+           FEATURED SPEECH
         ============================== */
 
         .featured {
@@ -495,7 +548,7 @@
         .featured-grid {
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: .9fr 1.1fr;
 
             gap: 70px;
 
@@ -505,7 +558,7 @@
         .featured-number {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(6rem, 15vw, 13rem);
+            font-size: clamp(6rem, 15vw, 12rem);
 
             color: var(--yellow);
 
@@ -515,7 +568,7 @@
         .featured-content h3 {
             font-family: "Playfair Display", serif;
 
-            font-size: 3.4rem;
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
 
             line-height: 1.05;
 
@@ -525,9 +578,9 @@
         .featured-content p {
             font-size: 1.05rem;
 
-            margin-bottom: 30px;
+            margin-bottom: 22px;
 
-            max-width: 600px;
+            max-width: 610px;
         }
 
 
@@ -549,7 +602,6 @@
             padding: 45px;
 
             display: flex;
-
             flex-direction: column;
 
             justify-content: space-between;
@@ -557,7 +609,6 @@
             transition: .4s;
 
             position: relative;
-
             overflow: hidden;
         }
 
@@ -576,7 +627,12 @@
         }
 
         .project-card:nth-child(4) {
-            background: #F3C5A3;
+            background: var(--peach);
+        }
+
+        .project-card:nth-child(5) {
+            background: var(--red);
+            color: white;
         }
 
         .project-card:hover {
@@ -596,7 +652,7 @@
         .project-card h3 {
             font-family: "Playfair Display", serif;
 
-            font-size: 2.6rem;
+            font-size: 2.5rem;
 
             line-height: 1.1;
 
@@ -613,7 +669,7 @@
 
 
         /* ==============================
-           SOCIAL VIDEO / REELS
+           SOCIAL VIDEO
         ============================== */
 
         .social-work {
@@ -635,7 +691,7 @@
         .social-intro {
             font-size: 1.05rem;
 
-            max-width: 500px;
+            max-width: 520px;
         }
 
         .video-grid {
@@ -653,7 +709,7 @@
         .video-frame {
             width: 100%;
 
-            aspect-ratio: 9 / 16;
+            min-height: 600px;
 
             background: var(--dark);
 
@@ -662,15 +718,18 @@
             display: flex;
 
             justify-content: center;
-
             align-items: center;
 
             position: relative;
         }
 
+        .video-frame .tiktok-embed {
+            margin: 0 !important;
+        }
+
         .video-placeholder {
             width: 100%;
-            height: 100%;
+            min-height: 600px;
 
             background:
                 linear-gradient(
@@ -681,11 +740,9 @@
                 );
 
             display: flex;
-
             flex-direction: column;
 
             justify-content: center;
-
             align-items: center;
 
             text-align: center;
@@ -713,17 +770,6 @@
             letter-spacing: 2px;
 
             text-transform: uppercase;
-        }
-
-        .video-frame iframe,
-        .video-frame blockquote {
-            width: 100% !important;
-
-            height: 100% !important;
-
-            border: none;
-
-            margin: 0 !important;
         }
 
         .video-info {
@@ -764,6 +810,84 @@
             flex-wrap: wrap;
 
             margin-top: 50px;
+        }
+
+
+        /* ==============================
+           PODCAST FEATURE
+        ============================== */
+
+        .podcast-section {
+            background: var(--yellow);
+        }
+
+        .podcast-card {
+            display: grid;
+
+            grid-template-columns: .75fr 1.25fr;
+
+            background: var(--dark);
+
+            color: white;
+
+            min-height: 420px;
+        }
+
+        .podcast-art {
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--red),
+                    var(--orange),
+                    var(--yellow)
+                );
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 50px;
+        }
+
+        .podcast-icon {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(5rem, 12vw, 10rem);
+
+            color: white;
+        }
+
+        .podcast-content {
+            padding: 60px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .podcast-content .section-label {
+            color: var(--yellow);
+        }
+
+        .podcast-content h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(2.4rem, 5vw, 4rem);
+
+            line-height: 1.05;
+
+            margin-bottom: 25px;
+        }
+
+        .podcast-content p {
+            max-width: 650px;
+
+            margin-bottom: 30px;
+
+            color: rgba(255,255,255,.85);
         }
 
 
@@ -827,15 +951,39 @@
 
             letter-spacing: -4px;
 
-            max-width: 900px;
+            max-width: 950px;
 
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .contact-title span {
             color: var(--red);
 
             font-style: italic;
+        }
+
+        .contact-copy {
+            max-width: 680px;
+
+            font-size: 1.1rem;
+
+            margin-bottom: 35px;
+        }
+
+        .contact-details {
+            margin-bottom: 35px;
+        }
+
+        .contact-details p {
+            margin-bottom: 8px;
+        }
+
+        .contact-details strong {
+            color: var(--burgundy);
+        }
+
+        .contact-details a:hover {
+            color: var(--red);
         }
 
         .contact-links {
@@ -878,7 +1026,7 @@
            MOBILE
         ============================== */
 
-        @media(max-width: 800px) {
+        @media(max-width: 900px) {
 
             .nav-links {
                 display: none;
@@ -898,9 +1046,10 @@
 
             .about-grid,
             .featured-grid,
-            .skills-grid,
             .project-grid,
-            .social-header {
+            .social-header,
+            .skills-grid,
+            .podcast-card {
                 grid-template-columns: 1fr;
             }
 
@@ -910,26 +1059,18 @@
                 gap: 15px;
             }
 
-            .about-grid {
-                gap: 50px;
-            }
-
-            .featured-grid {
-                gap: 40px;
-            }
-
-            .social-header {
-                gap: 20px;
-            }
-
             .video-grid {
                 grid-template-columns: 1fr;
             }
 
             .video-card {
-                max-width: 400px;
+                max-width: 420px;
 
                 margin: auto;
+            }
+
+            .podcast-content {
+                padding: 40px;
             }
 
             section {
@@ -970,6 +1111,8 @@
             <li><a href="#projects">Work</a></li>
 
             <li><a href="#social">Social</a></li>
+
+            <li><a href="#podcast">Podcast</a></li>
 
             <li><a href="#skills">Skills</a></li>
 
@@ -1053,7 +1196,6 @@
 
         </div>
 
-
         <div class="stat">
 
             <h2>80K+</h2>
@@ -1062,15 +1204,13 @@
 
         </div>
 
-
         <div class="stat">
 
-            <h2>30+</h2>
+            <h2>50+</h2>
 
-            <p>Videos Captioned</p>
+            <p>Events Photographed</p>
 
         </div>
-
 
         <div class="stat">
 
@@ -1105,6 +1245,7 @@
 
         <div class="about-grid">
 
+
             <div class="about-text">
 
                 <p class="about-lead">
@@ -1117,9 +1258,9 @@
 
                 <p>
 
-                    My work moves across various fields such as journalism, communications,
+                    My work moves across journalism, communications,
                     social media, photography, video, broadcasting,
-                    and interactive storytelling.
+                    podcasting, and interactive storytelling.
 
                 </p>
 
@@ -1128,16 +1269,17 @@
                     At UC Berkeley, I've developed stories exploring
                     community, identity, housing, labor, culture, and
                     representation while also producing content for
-                    various student organizations and audiences across digital platforms.
+                    student organizations and audiences across digital platforms.
 
                 </p>
 
                 <p>
 
                     Whether I'm conducting a video interview, building an
-                    interactive story, producing social media content, working
-                    behind a broadcast camera, or standing behind a
-                    podium, my goal remains the same:
+                    interactive story, producing social media content,
+                    working behind a broadcast camera, recording audio,
+                    or standing behind a podium, my goal remains the same:
+
                     <strong>I want to make people feel something.</strong>
 
                 </p>
@@ -1145,35 +1287,60 @@
             </div>
 
 
-            <div class="about-card">
+            <div class="about-visual">
 
-                <h3>
-                    Education
-                </h3>
+                <div class="about-image-wrap">
 
-                <p>
-                    <strong>University of California, Berkeley</strong>
-                </p>
+                    <!--
+                    PUT YOUR PHOTO INSIDE:
+                    images/taj-about.png
+                    -->
 
-                <p>
-                    B.A. Media Studies with an emphasis in <em>Digital Studies</em>
-                </p>
+                    <img
+                        src="images/taj-about.png"
+                        alt="Portrait of Taj Robles"
+                        class="about-image"
+                    >
 
-                <p>
-                    Minor in Journalism
-                </p>
+                </div>
 
-                <br>
 
-                <p>
-                    Class of 2026
-                </p>
+                <div class="about-card">
 
-                <p>
-                    Berkeley, California
-                </p>
+                    <h3>
+                        Education
+                    </h3>
+
+                    <p>
+                        <strong>University of California, Berkeley</strong>
+                    </p>
+
+                    <p>
+                        B.A. Media Studies
+                    </p>
+
+                    <p>
+                        Emphasis in <em>Digital Studies</em>
+                    </p>
+
+                    <p>
+                        Minor in Journalism
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Class of 2026
+                    </p>
+
+                    <p>
+                        Berkeley, California
+                    </p>
+
+                </div>
 
             </div>
+
 
         </div>
 
@@ -1188,8 +1355,8 @@
 ================================ -->
 
 <section
-class="experience-section"
-id="experience">
+    class="experience-section"
+    id="experience">
 
     <div class="container">
 
@@ -1202,6 +1369,8 @@ id="experience">
         </h2>
 
 
+
+        <!-- UC BERKELEY LABOR CENTER -->
 
         <div class="experience-item">
 
@@ -1223,19 +1392,16 @@ id="experience">
 
                     Supported digital communications and multimedia
                     accessibility initiatives, including video captioning,
-                    archival organization, digital asset management
-                    research, donor communications, and content operations.
+                    archival organization, digital asset management research,
+                    donor communications, and content operations.
 
                 </p>
 
                 <div class="tags">
 
                     <span class="tag">Communications</span>
-
                     <span class="tag">Accessibility</span>
-
                     <span class="tag">Salesforce</span>
-
                     <span class="tag">Digital Archives</span>
 
                 </div>
@@ -1245,6 +1411,8 @@ id="experience">
         </div>
 
 
+
+        <!-- LBSA -->
 
         <div class="experience-item">
 
@@ -1267,18 +1435,16 @@ id="experience">
                     Created social campaigns, graphics, event promotions,
                     photography, interviews, and digital content designed
                     to strengthen community engagement and spotlight
-                    Latinx student leadership. Main photographer over 50 + events.
+                    Latinx student leadership. Served as a primary
+                    photographer across 50+ events.
 
                 </p>
 
                 <div class="tags">
 
                     <span class="tag">Social Media</span>
-
                     <span class="tag">Graphic Design</span>
-
                     <span class="tag">Photography</span>
-
                     <span class="tag">Bilingual Content</span>
 
                 </div>
@@ -1288,6 +1454,8 @@ id="experience">
         </div>
 
 
+
+        <!-- CAL ICE HOCKEY -->
 
         <div class="experience-item">
 
@@ -1317,11 +1485,8 @@ id="experience">
                 <div class="tags">
 
                     <span class="tag">Broadcast</span>
-
                     <span class="tag">Camera</span>
-
                     <span class="tag">Live Production</span>
-
                     <span class="tag">Sports Media</span>
 
                 </div>
@@ -1331,6 +1496,8 @@ id="experience">
         </div>
 
 
+
+        <!-- CAL BEAR MEDIA -->
 
         <div class="experience-item">
 
@@ -1359,9 +1526,7 @@ id="experience">
                 <div class="tags">
 
                     <span class="tag">Leadership</span>
-
                     <span class="tag">Content Creation</span>
-
                     <span class="tag">Community</span>
 
                 </div>
@@ -1377,7 +1542,7 @@ id="experience">
 
 
 <!-- ==============================
-     FEATURED MOMENT
+     FEATURED SPEECH
 ================================ -->
 
 <section class="featured">
@@ -1423,10 +1588,11 @@ id="experience">
 
                 </p>
 
-                <a href="YOUR-SPEECH-LINK"
-                   target="_blank"
-                   class="button"
-                   style="border-color:white;color:white;">
+                <a
+                    href="https://www.tiktok.com/@itstajro/video/7641481524684147998"
+                    target="_blank"
+                    class="button"
+                    style="border-color:white;color:white;">
 
                     Watch the Speech →
 
@@ -1459,9 +1625,10 @@ id="experience">
         </h2>
 
 
-
         <div class="project-grid">
 
+
+            <!-- HOUSING STORY -->
 
             <article class="project-card">
 
@@ -1485,13 +1652,15 @@ id="experience">
 
                 </div>
 
-                <a href="YOUR-PROJECT-LINK" class="project-link">
+                <a href="#" class="project-link">
                     View Story →
                 </a>
 
             </article>
 
 
+
+            <!-- WORLD CUP -->
 
             <article class="project-card">
 
@@ -1515,13 +1684,15 @@ id="experience">
 
                 </div>
 
-                <a href="YOUR-PROJECT-LINK" class="project-link">
+                <a href="#" class="project-link">
                     View Project →
                 </a>
 
             </article>
 
 
+
+            <!-- REPRESENTATION -->
 
             <article class="project-card">
 
@@ -1546,13 +1717,15 @@ id="experience">
 
                 </div>
 
-                <a href="YOUR-PROJECT-LINK" class="project-link">
+                <a href="#" class="project-link">
                     Read Story →
                 </a>
 
             </article>
 
 
+
+            <!-- YOURSTRULY -->
 
             <article class="project-card">
 
@@ -1577,8 +1750,45 @@ id="experience">
 
                 </div>
 
-                <a href="YOUR-PROJECT-LINK" class="project-link">
+                <a href="#" class="project-link">
                     Explore Reporting →
+                </a>
+
+            </article>
+
+
+
+            <!-- PODCAST PROJECT -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <div class="project-type">
+                        Audio Storytelling
+                    </div>
+
+                    <h3>
+                        Blooming Out the Concrete Jungle
+                    </h3>
+
+                    <p>
+
+                        An example of my audio and podcast storytelling work,
+                        demonstrating narrative structure, voice, interviewing,
+                        and digital audio production.
+
+                    </p>
+
+                </div>
+
+                <a
+                    href="https://www.piercemediaarts.com/kpcradio/blooming-out-the-concrete-junge-ep-3/article_e0904c6a-29fb-41fe-9632-c6e975ee34ef.html"
+                    target="_blank"
+                    class="project-link">
+
+                    Listen to Podcast →
+
                 </a>
 
             </article>
@@ -1596,7 +1806,9 @@ id="experience">
      SOCIAL VIDEO WORK
 ================================ -->
 
-<section class="social-work" id="social">
+<section
+    class="social-work"
+    id="social">
 
     <div class="container">
 
@@ -1608,8 +1820,12 @@ id="experience">
                     04 — Social Storytelling
                 </p>
 
-                <h2 class="section-title" style="margin-bottom:0;">
+                <h2
+                    class="section-title"
+                    style="margin-bottom:0;">
+
                     Stories made for the scroll.
+
                 </h2>
 
             </div>
@@ -1633,68 +1849,54 @@ id="experience">
 
 
             <!-- =========================
-                 VIDEO 1
+                 VIDEO 1 — VIRAL SPEECH
             ========================== -->
 
             <article class="video-card">
 
-    <div class="video-frame">
+                <div class="video-frame">
 
-        <blockquote
-            class="tiktok-embed"
-            cite="https://www.tiktok.com/@itstajro/video/7641481524684147998"
-            data-video-id="7641481524684147998"
-            style="max-width: 605px; min-width: 325px;">
+                    <blockquote
+                        class="tiktok-embed"
+                        cite="https://www.tiktok.com/@itstajro/video/7641481524684147998"
+                        data-video-id="7641481524684147998"
+                        style="max-width:605px;min-width:325px;">
 
-            <section>
-                <a
-                    target="_blank"
-                    title="@itstajro"
-                    href="https://www.tiktok.com/@itstajro">
-                    @itstajro
-                </a>
-            </section>
+                        <section>
 
-        </blockquote>
+                            <a
+                                target="_blank"
+                                title="@itstajro"
+                                href="https://www.tiktok.com/@itstajro">
 
-    </div>
+                                @itstajro
 
+                            </a>
 
-    <div class="video-info">
+                        </section>
 
-        <span class="video-platform">
-            TikTok · UC Berkeley
-        </span>
+                    </blockquote>
 
-        <h3>
-            3 Pilares, 3 Pillars
-        </h3>
+                </div>
 
-        <p>
-            My UC Berkeley Chicanx/Latinx Graduation speech
-            centered on family, resilience, education, grief,
-            and liberation. The speech went viral on TikTok
-            and reached hundreds of thousands of viewers.
-        </p>
-
-    </div>
-
-</article>
 
                 <div class="video-info">
 
                     <span class="video-platform">
-                        Instagram / TikTok
+                        TikTok · UC Berkeley
                     </span>
 
                     <h3>
-                        Project Title
+                        3 Pilares, 3 Pillars
                     </h3>
 
                     <p>
-                        Add a short description explaining
-                        what you created, your role, and
-                        what this piece accomplished.
+
+                        My UC Berkeley Chicanx/Latinx Graduation speech
+                        centered on family, resilience, education, grief,
+                        and liberation. The speech went viral on TikTok
+                        and reached hundreds of thousands of viewers.
+
                     </p>
 
                 </div>
@@ -1723,29 +1925,25 @@ id="experience">
 
                     </div>
 
-
-                    <!--
-                    PASTE INSTAGRAM OR TIKTOK
-                    EMBED CODE HERE LATER
-                    -->
-
                 </div>
 
 
                 <div class="video-info">
 
                     <span class="video-platform">
-                        Instagram
+                        Instagram / TikTok
                     </span>
 
                     <h3>
-                        Project Title
+                        Future Video Project
                     </h3>
 
                     <p>
-                        Use this space to explain the story,
-                        campaign, interview, event, or
-                        creative idea behind the video.
+
+                        Add a short description explaining
+                        what you created, your role, and
+                        what the piece accomplished.
+
                     </p>
 
                 </div>
@@ -1774,29 +1972,25 @@ id="experience">
 
                     </div>
 
-
-                    <!--
-                    PASTE INSTAGRAM OR TIKTOK
-                    EMBED CODE HERE LATER
-                    -->
-
                 </div>
 
 
                 <div class="video-info">
 
                     <span class="video-platform">
-                        TikTok
+                        Instagram / TikTok
                     </span>
 
                     <h3>
-                        Project Title
+                        Future Video Project
                     </h3>
 
                     <p>
-                        Add context about the content,
-                        audience, performance, or your
-                        creative approach.
+
+                        Use this space for a journalism video,
+                        campaign, interview, broadcast clip,
+                        or other short-form project.
+
                     </p>
 
                 </div>
@@ -1810,23 +2004,90 @@ id="experience">
         <div class="social-buttons">
 
             <a
-                href="YOUR-INSTAGRAM-URL"
+                href="https://www.tiktok.com/@itstajro"
                 target="_blank"
                 class="button button-primary">
-
-                View Instagram ↗
-
-            </a>
-
-
-            <a
-                href="YOUR-TIKTOK-URL"
-                target="_blank"
-                class="button">
 
                 View TikTok ↗
 
             </a>
+
+            <!-- ADD INSTAGRAM LINK LATER -->
+
+            <a
+                href="#"
+                class="button">
+
+                Instagram Coming Soon
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     PODCAST FEATURE
+================================ -->
+
+<section
+    class="podcast-section"
+    id="podcast">
+
+    <div class="container">
+
+
+        <div class="podcast-card">
+
+
+            <div class="podcast-art">
+
+                <div class="podcast-icon">
+                    ◉
+                </div>
+
+            </div>
+
+
+            <div class="podcast-content">
+
+                <p class="section-label">
+                    05 — Audio Storytelling
+                </p>
+
+                <h3>
+                    Blooming Out the Concrete Jungle
+                </h3>
+
+                <p>
+
+                    Audio gives storytelling a different kind of intimacy.
+                    This podcast example highlights my experience working
+                    with voice, narrative structure, interviews, and
+                    digital audio storytelling.
+
+                </p>
+
+                <div>
+
+                    <a
+                        href="https://www.piercemediaarts.com/kpcradio/blooming-out-the-concrete-junge-ep-3/article_e0904c6a-29fb-41fe-9632-c6e975ee34ef.html"
+                        target="_blank"
+                        class="button"
+                        style="border-color:white;color:white;">
+
+                        Listen to the Episode →
+
+                    </a>
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -1841,13 +2102,13 @@ id="experience">
 ================================ -->
 
 <section
-class="skills-section"
-id="skills">
+    class="skills-section"
+    id="skills">
 
     <div class="container">
 
         <p class="section-label">
-            05 — Skills & Tools
+            06 — Skills & Tools
         </p>
 
         <h2 class="section-title">
@@ -1867,23 +2128,17 @@ id="skills">
                 <ul>
 
                     <li>Reporting</li>
-
                     <li>Interviewing</li>
-
                     <li>Investigative Journalism</li>
-
                     <li>AP Style</li>
-
                     <li>Multimedia Storytelling</li>
-
                     <li>Data Journalism</li>
-
+                    <li>Podcasting</li>
                     <li>Spanish-Language Interviews</li>
 
                 </ul>
 
             </div>
-
 
 
             <div class="skills-column">
@@ -1895,23 +2150,17 @@ id="skills">
                 <ul>
 
                     <li>Photography</li>
-
                     <li>Video Editing</li>
-
                     <li>Broadcast Production</li>
-
                     <li>Social Media</li>
-
                     <li>Graphic Design</li>
-
                     <li>Content Strategy</li>
-
                     <li>Copywriting</li>
+                    <li>Audio Storytelling</li>
 
                 </ul>
 
             </div>
-
 
 
             <div class="skills-column">
@@ -1923,19 +2172,12 @@ id="skills">
                 <ul>
 
                     <li>Adobe Premiere Pro</li>
-
                     <li>Photoshop</li>
-
                     <li>Lightroom</li>
-
                     <li>Canva</li>
-
                     <li>CapCut</li>
-
                     <li>Datawrapper</li>
-
                     <li>Flourish</li>
-
                     <li>Salesforce</li>
 
                 </ul>
@@ -1956,13 +2198,13 @@ id="skills">
 ================================ -->
 
 <section
-class="contact"
-id="contact">
+    class="contact"
+    id="contact">
 
     <div class="container">
 
         <p class="section-label">
-            06 — Let's Connect
+            07 — Let's Connect
         </p>
 
         <h2 class="contact-title">
@@ -1973,24 +2215,55 @@ id="contact">
         </h2>
 
 
-        <p style="
-            max-width:650px;
-            font-size:1.1rem;
-            margin-bottom:35px;
-        ">
+        <p class="contact-copy">
 
             I'm interested in opportunities across journalism,
             digital media, broadcasting, communications,
-            entertainment, and creative storytelling.
+            entertainment, social media, and creative storytelling.
 
         </p>
 
 
+        <div class="contact-details">
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:itstajro@berkeley.edu">
+                    itstajro@berkeley.edu
+                </a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                <a
+                    href="https://www.linkedin.com/in/tajrobles/"
+                    target="_blank">
+
+                    linkedin.com/in/tajrobles
+
+                </a>
+            </p>
+
+            <p>
+                <strong>TikTok:</strong>
+                <a
+                    href="https://www.tiktok.com/@itstajro"
+                    target="_blank">
+
+                    @itstajro
+
+                </a>
+            </p>
+
+        </div>
+
+
         <div class="contact-links">
 
+
             <a
-            href="mailto:YOUR-EMAIL@gmail.com"
-            class="button button-primary">
+                href="mailto:itstajro@berkeley.edu"
+                class="button button-primary">
 
                 Email Me
 
@@ -1998,43 +2271,50 @@ id="contact">
 
 
             <a
-            href="YOUR-LINKEDIN-LINK"
-            target="_blank"
-            class="button">
+                href="https://www.linkedin.com/in/tajrobles/"
+                target="_blank"
+                class="button">
 
-                LinkedIn
-
-            </a>
-
-
-            <a
-            href="YOUR-INSTAGRAM-LINK"
-            target="_blank"
-            class="button">
-
-                Instagram
+                LinkedIn ↗
 
             </a>
 
 
             <a
-            href="YOUR-TIKTOK-LINK"
-            target="_blank"
-            class="button">
+                href="https://www.tiktok.com/@itstajro"
+                target="_blank"
+                class="button">
 
-                TikTok
+                TikTok ↗
 
             </a>
 
 
             <a
-            href="YOUR-RESUME.pdf"
-            target="_blank"
-            class="button">
+                href="https://www.piercemediaarts.com/kpcradio/blooming-out-the-concrete-junge-ep-3/article_e0904c6a-29fb-41fe-9632-c6e975ee34ef.html"
+                target="_blank"
+                class="button">
 
-                Résumé
+                Podcast ↗
 
             </a>
+
+
+            <!--
+            WHEN YOU UPLOAD YOUR RESUME,
+            REPLACE # WITH SOMETHING LIKE:
+
+            href="documents/Taj-Robles-Resume.pdf"
+            -->
+
+            <a
+                href="#"
+                class="button">
+
+                Résumé Coming Soon
+
+            </a>
+
 
         </div>
 
@@ -2063,6 +2343,18 @@ id="contact">
     </div>
 
 </footer>
+
+
+
+<!-- ==============================
+     TIKTOK EMBED SCRIPT
+     ONLY INCLUDE ONCE
+================================ -->
+
+<script
+    async
+    src="https://www.tiktok.com/embed.js">
+</script>
 
 
 </body>
