@@ -2,13 +2,20 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Taj Robles | Multimedia Storyteller</title>
+    <title>Alondra Taj Robles | Multimedia Storyteller</title>
 
-    <!-- FONTS -->
+
+    <!-- ==========================================
+         GOOGLE FONTS
+    =========================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
@@ -16,128 +23,205 @@
         rel="stylesheet"
     >
 
+
     <style>
 
-        /* ==============================
+
+        /* ==========================================
            COLOR PALETTE
-        ============================== */
+        =========================================== */
 
         :root {
+
             --cream: #FFF8EB;
+
+            --soft-cream: #FFF1DE;
+
             --orange: #F26A21;
+
             --yellow: #F5B82E;
+
             --red: #D94332;
+
             --burgundy: #711F2B;
+
             --dark: #221713;
+
             --white: #FFFFFF;
-            --light-orange: #FFE2C2;
+
             --peach: #F3C5A3;
+
+            --light-orange: #FFE2C2;
+
         }
 
 
-        /* ==============================
-           GLOBAL
-        ============================== */
+        /* ==========================================
+           GLOBAL RESET
+        =========================================== */
 
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
+
         }
+
 
         html {
+
             scroll-behavior: smooth;
+
         }
+
 
         body {
+
             font-family: "DM Sans", sans-serif;
+
             background: var(--cream);
+
             color: var(--dark);
+
             line-height: 1.6;
+
         }
 
+
         a {
+
             color: inherit;
+
             text-decoration: none;
+
         }
+
 
         img,
         video {
+
             max-width: 100%;
+
             display: block;
+
         }
+
 
         .container {
+
             width: min(1200px, 88%);
+
             margin: auto;
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            NAVIGATION
-        ============================== */
+        =========================================== */
 
         nav {
+
             position: fixed;
+
             top: 0;
+
             width: 100%;
+
             z-index: 1000;
 
-            background: rgba(255, 248, 235, 0.93);
+            background: rgba(255, 248, 235, 0.94);
+
             backdrop-filter: blur(12px);
 
             border-bottom: 1px solid rgba(34, 23, 19, 0.08);
+
         }
 
+
         .nav-container {
+
             width: min(1200px, 88%);
+
             margin: auto;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             height: 75px;
+
         }
+
 
         .logo {
+
             font-family: "Playfair Display", serif;
+
             font-size: 1.6rem;
+
             font-weight: 700;
+
             color: var(--red);
+
         }
+
 
         .nav-links {
+
             display: flex;
-            gap: 25px;
+
+            gap: 23px;
+
             list-style: none;
 
-            font-size: .88rem;
+            font-size: .86rem;
+
             font-weight: 600;
+
         }
+
 
         .nav-links a {
+
             transition: .3s;
+
         }
+
 
         .nav-links a:hover {
+
             color: var(--orange);
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            BUTTONS
-        ============================== */
+        =========================================== */
 
         .buttons {
+
             margin-top: 40px;
 
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 15px;
+
         }
 
+
         .button {
+
             display: inline-block;
 
             padding: 14px 24px;
@@ -145,45 +229,66 @@
             border: 2px solid var(--dark);
 
             font-weight: 700;
+
             font-size: .9rem;
 
             transition: .3s;
+
         }
+
 
         .button-primary {
+
             background: var(--dark);
+
             color: white;
+
         }
 
+
         .button:hover {
+
             background: var(--orange);
+
             border-color: var(--orange);
+
             color: white;
 
             transform: translateY(-3px);
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            HERO
-        ============================== */
+        =========================================== */
 
         .hero {
+
             min-height: 100vh;
+
             padding-top: 130px;
 
             display: flex;
+
             align-items: center;
 
             position: relative;
+
             overflow: hidden;
+
         }
 
+
         .hero::before {
+
             content: "";
+
             position: absolute;
 
             width: 450px;
+
             height: 450px;
 
             background: var(--yellow);
@@ -191,16 +296,22 @@
             border-radius: 50%;
 
             right: -180px;
+
             top: 90px;
 
             opacity: .35;
+
         }
 
+
         .hero::after {
+
             content: "";
+
             position: absolute;
 
             width: 300px;
+
             height: 300px;
 
             background: var(--red);
@@ -208,29 +319,42 @@
             border-radius: 50%;
 
             left: -180px;
+
             bottom: -80px;
 
             opacity: .12;
+
         }
+
 
         .hero-content {
+
             position: relative;
+
             z-index: 2;
+
         }
 
+
         .eyebrow {
+
             text-transform: uppercase;
+
             letter-spacing: 4px;
 
             color: var(--orange);
 
             font-size: .8rem;
+
             font-weight: 700;
 
             margin-bottom: 20px;
+
         }
 
+
         .hero h1 {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(4rem, 9vw, 8.5rem);
@@ -239,67 +363,100 @@
 
             letter-spacing: -5px;
 
+            max-width: 1050px;
+
             margin-bottom: 30px;
 
-            max-width: 1000px;
         }
+
 
         .hero h1 span {
+
             color: var(--red);
+
             font-style: italic;
+
         }
 
+
         .hero-description {
+
             max-width: 760px;
 
             font-size: 1.3rem;
+
             line-height: 1.7;
 
             margin-bottom: 35px;
+
         }
 
+
         .hero-details {
+
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 10px 25px;
 
             font-size: .9rem;
+
             font-weight: 600;
+
         }
+
 
         .hero-details span {
+
             color: var(--burgundy);
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            STATS
-        ============================== */
+        =========================================== */
 
         .stats {
+
             background: var(--burgundy);
+
             color: white;
 
             padding: 55px 0;
+
         }
+
 
         .stat-grid {
+
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
         }
 
+
         .stat {
+
             padding: 20px 30px;
 
             border-right: 1px solid rgba(255,255,255,.2);
+
         }
+
 
         .stat:last-child {
+
             border-right: none;
+
         }
 
+
         .stat h2 {
+
             font-family: "Playfair Display", serif;
 
             color: var(--yellow);
@@ -307,38 +464,52 @@
             font-size: 3.3rem;
 
             margin-bottom: 5px;
+
         }
 
+
         .stat p {
+
             font-size: .8rem;
 
             text-transform: uppercase;
+
             letter-spacing: 2px;
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            GENERAL SECTIONS
-        ============================== */
+        =========================================== */
 
         section {
+
             padding: 120px 0;
+
         }
 
+
         .section-label {
+
             color: var(--red);
 
             font-size: .75rem;
 
             text-transform: uppercase;
+
             letter-spacing: 4px;
 
             font-weight: 700;
 
             margin-bottom: 15px;
+
         }
 
+
         .section-title {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(2.8rem, 6vw, 5.5rem);
@@ -350,14 +521,17 @@
             max-width: 900px;
 
             margin-bottom: 60px;
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            ABOUT
-        ============================== */
+        =========================================== */
 
         .about-grid {
+
             display: grid;
 
             grid-template-columns: 1.05fr .95fr;
@@ -365,9 +539,12 @@
             gap: 70px;
 
             align-items: center;
+
         }
 
+
         .about-lead {
+
             font-family: "Playfair Display", serif;
 
             font-size: 2rem;
@@ -375,44 +552,62 @@
             line-height: 1.35;
 
             margin-bottom: 30px;
+
         }
 
+
         .about-text p {
+
             margin-bottom: 20px;
 
             font-size: 1.05rem;
+
         }
+
 
         .about-visual {
+
             position: relative;
+
         }
 
+
         .about-image-wrap {
+
             position: relative;
 
             max-width: 480px;
 
             margin: auto;
+
         }
 
+
         .about-image-wrap::before {
+
             content: "";
 
             position: absolute;
 
             width: 100%;
+
             height: 100%;
 
             background: var(--yellow);
 
             left: 20px;
+
             top: 20px;
 
             z-index: 0;
+
         }
 
+
         .about-image {
+
             position: relative;
+
             z-index: 1;
 
             width: 100%;
@@ -420,13 +615,18 @@
             object-fit: cover;
 
             border: 3px solid var(--dark);
+
         }
 
+
         .about-card {
+
             position: relative;
+
             z-index: 2;
 
             background: var(--orange);
+
             color: white;
 
             padding: 30px;
@@ -438,42 +638,57 @@
             transform: rotate(-2deg);
 
             box-shadow: 0 15px 30px rgba(34,23,19,.12);
+
         }
 
+
         .about-card h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: 1.8rem;
 
             margin-bottom: 15px;
+
         }
+
 
         .about-card p {
+
             margin-bottom: 7px;
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            EXPERIENCE
-        ============================== */
+        =========================================== */
 
         .experience-section {
-            background: #FFF1DE;
+
+            background: var(--soft-cream);
+
         }
 
+
         .experience-item {
+
             display: grid;
 
             grid-template-columns: 180px 1fr;
 
             gap: 50px;
 
-            padding: 45px 0;
+            padding: 48px 0;
 
             border-top: 1px solid rgba(34,23,19,.2);
+
         }
 
+
         .experience-date {
+
             font-size: .8rem;
 
             text-transform: uppercase;
@@ -483,38 +698,54 @@
             color: var(--red);
 
             font-weight: 700;
+
         }
 
+
         .experience-content h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: 2rem;
 
             margin-bottom: 5px;
+
         }
 
+
         .experience-company {
+
             color: var(--orange);
 
             font-weight: 700;
 
             margin-bottom: 15px;
+
         }
+
 
         .experience-content p {
-            max-width: 760px;
+
+            max-width: 800px;
+
         }
 
+
         .tags {
+
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 8px;
 
             margin-top: 20px;
+
         }
 
+
         .tag {
+
             padding: 6px 12px;
 
             border: 1px solid var(--burgundy);
@@ -524,14 +755,17 @@
             font-size: .75rem;
 
             color: var(--burgundy);
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            FEATURED SPEECH
-        ============================== */
+        =========================================== */
 
         .featured {
+
             background: var(--red);
 
             color: white;
@@ -539,13 +773,19 @@
             position: relative;
 
             overflow: hidden;
+
         }
+
 
         .featured .section-label {
+
             color: var(--yellow);
+
         }
 
+
         .featured-grid {
+
             display: grid;
 
             grid-template-columns: .9fr 1.1fr;
@@ -553,9 +793,12 @@
             gap: 70px;
 
             align-items: center;
+
         }
 
+
         .featured-number {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(6rem, 15vw, 12rem);
@@ -563,9 +806,12 @@
             color: var(--yellow);
 
             line-height: .8;
+
         }
 
+
         .featured-content h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(2.4rem, 5vw, 3.6rem);
@@ -573,73 +819,108 @@
             line-height: 1.05;
 
             margin-bottom: 25px;
+
         }
 
+
         .featured-content p {
+
             font-size: 1.05rem;
 
             margin-bottom: 22px;
 
-            max-width: 610px;
+            max-width: 620px;
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            PROJECTS
-        ============================== */
+        =========================================== */
 
         .project-grid {
+
             display: grid;
 
             grid-template-columns: repeat(2, 1fr);
 
             gap: 30px;
+
         }
 
+
         .project-card {
+
             min-height: 440px;
 
             padding: 45px;
 
             display: flex;
+
             flex-direction: column;
 
             justify-content: space-between;
 
+            position: relative;
+
+            overflow: hidden;
+
             transition: .4s;
 
-            position: relative;
-            overflow: hidden;
         }
+
 
         .project-card:nth-child(1) {
+
             background: var(--yellow);
+
         }
+
 
         .project-card:nth-child(2) {
+
             background: var(--orange);
+
             color: white;
+
         }
+
 
         .project-card:nth-child(3) {
+
             background: var(--burgundy);
+
             color: white;
+
         }
+
 
         .project-card:nth-child(4) {
+
             background: var(--peach);
+
         }
+
 
         .project-card:nth-child(5) {
+
             background: var(--red);
+
             color: white;
+
         }
+
 
         .project-card:hover {
+
             transform: translateY(-8px);
+
         }
 
+
         .project-type {
+
             text-transform: uppercase;
 
             letter-spacing: 3px;
@@ -647,9 +928,12 @@
             font-size: .7rem;
 
             font-weight: 700;
+
         }
 
+
         .project-card h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: 2.5rem;
@@ -657,26 +941,35 @@
             line-height: 1.1;
 
             margin: 20px 0;
+
         }
 
+
         .project-link {
+
             font-weight: 700;
 
             font-size: .9rem;
 
             margin-top: 25px;
+
         }
 
 
-        /* ==============================
-           SOCIAL VIDEO
-        ============================== */
+
+        /* ==========================================
+           SOCIAL STORYTELLING
+        =========================================== */
 
         .social-work {
-            background: #FFF1DE;
+
+            background: var(--soft-cream);
+
         }
 
+
         .social-header {
+
             display: grid;
 
             grid-template-columns: 1fr 1fr;
@@ -686,50 +979,102 @@
             align-items: end;
 
             margin-bottom: 60px;
+
         }
 
+
         .social-intro {
+
             font-size: 1.05rem;
 
             max-width: 520px;
+
         }
+
 
         .video-grid {
+
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
 
             gap: 30px;
+
+            align-items: start;
+
         }
+
 
         .video-card {
-            position: relative;
+
+            min-width: 0;
+
         }
 
+
+
+        /* REAL TIKTOK EMBED */
+
         .video-frame {
+
             width: 100%;
 
-            min-height: 600px;
+            background: transparent;
 
-            background: var(--dark);
-
-            overflow: hidden;
+            overflow: visible;
 
             display: flex;
 
             justify-content: center;
-            align-items: center;
 
-            position: relative;
+            align-items: flex-start;
+
         }
+
 
         .video-frame .tiktok-embed {
-            margin: 0 !important;
+
+            width: 100% !important;
+
+            max-width: 605px !important;
+
+            min-width: 0 !important;
+
+            margin: 0 auto !important;
+
         }
 
-        .video-placeholder {
+
+        .video-frame iframe {
+
+            width: 100% !important;
+
+            border: none !important;
+
+        }
+
+
+
+        /* FUTURE VIDEO PLACEHOLDERS */
+
+        .placeholder-frame {
+
             width: 100%;
-            min-height: 600px;
+
+            aspect-ratio: 9 / 16;
+
+            overflow: hidden;
+
+            background: var(--dark);
+
+        }
+
+
+        .video-placeholder {
+
+            width: 100%;
+
+            height: 100%;
 
             background:
                 linear-gradient(
@@ -740,9 +1085,11 @@
                 );
 
             display: flex;
+
             flex-direction: column;
 
             justify-content: center;
+
             align-items: center;
 
             text-align: center;
@@ -750,9 +1097,12 @@
             padding: 35px;
 
             color: white;
+
         }
 
+
         .video-placeholder-number {
+
             font-family: "Playfair Display", serif;
 
             font-size: 5rem;
@@ -760,9 +1110,12 @@
             color: var(--yellow);
 
             line-height: 1;
+
         }
 
+
         .video-placeholder p {
+
             margin-top: 15px;
 
             font-size: .8rem;
@@ -770,13 +1123,19 @@
             letter-spacing: 2px;
 
             text-transform: uppercase;
+
         }
+
 
         .video-info {
+
             padding-top: 20px;
+
         }
 
+
         .video-platform {
+
             color: var(--red);
 
             text-transform: uppercase;
@@ -786,23 +1145,32 @@
             letter-spacing: 2px;
 
             font-weight: 700;
+
         }
 
+
         .video-info h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: 1.6rem;
 
             margin: 7px 0 10px;
+
         }
 
+
         .video-info p {
+
             font-size: .9rem;
 
             opacity: .8;
+
         }
 
+
         .social-buttons {
+
             display: flex;
 
             gap: 15px;
@@ -810,18 +1178,24 @@
             flex-wrap: wrap;
 
             margin-top: 50px;
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            PODCAST FEATURE
-        ============================== */
+        =========================================== */
 
         .podcast-section {
+
             background: var(--yellow);
+
         }
 
+
         .podcast-card {
+
             display: grid;
 
             grid-template-columns: .75fr 1.25fr;
@@ -831,9 +1205,12 @@
             color: white;
 
             min-height: 420px;
+
         }
 
+
         .podcast-art {
+
             background:
                 linear-gradient(
                     145deg,
@@ -845,20 +1222,27 @@
             display: flex;
 
             justify-content: center;
+
             align-items: center;
 
             padding: 50px;
+
         }
 
+
         .podcast-icon {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(5rem, 12vw, 10rem);
 
             color: white;
+
         }
 
+
         .podcast-content {
+
             padding: 60px;
 
             display: flex;
@@ -866,13 +1250,19 @@
             flex-direction: column;
 
             justify-content: center;
+
         }
+
 
         .podcast-content .section-label {
+
             color: var(--yellow);
+
         }
 
+
         .podcast-content h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(2.4rem, 5vw, 4rem);
@@ -880,69 +1270,96 @@
             line-height: 1.05;
 
             margin-bottom: 25px;
+
         }
 
+
         .podcast-content p {
+
             max-width: 650px;
 
             margin-bottom: 30px;
 
             color: rgba(255,255,255,.85);
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            SKILLS
-        ============================== */
+        =========================================== */
 
         .skills-section {
+
             background: var(--dark);
 
             color: white;
+
         }
+
 
         .skills-section .section-label {
+
             color: var(--yellow);
+
         }
+
 
         .skills-grid {
+
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
 
-            gap: 50px;
+            gap: 40px;
+
         }
 
+
         .skills-column h3 {
+
             color: var(--orange);
 
             font-family: "Playfair Display", serif;
 
-            font-size: 1.8rem;
+            font-size: 1.7rem;
 
             margin-bottom: 25px;
+
         }
+
 
         .skills-column ul {
+
             list-style: none;
+
         }
 
+
         .skills-column li {
+
             padding: 10px 0;
 
             border-bottom: 1px solid rgba(255,255,255,.15);
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            CONTACT
-        ============================== */
+        =========================================== */
 
         .contact {
+
             background: var(--yellow);
+
         }
 
+
         .contact-title {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(4rem, 9vw, 8rem);
@@ -954,52 +1371,76 @@
             max-width: 950px;
 
             margin-bottom: 40px;
+
         }
 
+
         .contact-title span {
+
             color: var(--red);
 
             font-style: italic;
+
         }
 
+
         .contact-copy {
+
             max-width: 680px;
 
             font-size: 1.1rem;
 
             margin-bottom: 35px;
+
         }
+
 
         .contact-details {
+
             margin-bottom: 35px;
+
         }
+
 
         .contact-details p {
+
             margin-bottom: 8px;
+
         }
+
 
         .contact-details strong {
+
             color: var(--burgundy);
+
         }
+
 
         .contact-details a:hover {
+
             color: var(--red);
+
         }
 
+
         .contact-links {
+
             display: flex;
 
             flex-wrap: wrap;
 
             gap: 15px;
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            FOOTER
-        ============================== */
+        =========================================== */
 
         footer {
+
             background: var(--burgundy);
 
             color: white;
@@ -1007,9 +1448,12 @@
             padding: 35px 0;
 
             font-size: .8rem;
+
         }
 
+
         .footer-container {
+
             width: min(1200px, 88%);
 
             margin: auto;
@@ -1019,30 +1463,45 @@
             justify-content: space-between;
 
             gap: 20px;
+
         }
 
 
-        /* ==============================
+
+        /* ==========================================
            MOBILE
-        ============================== */
+        =========================================== */
 
         @media(max-width: 900px) {
 
+
             .nav-links {
+
                 display: none;
+
             }
+
 
             .hero h1 {
+
                 letter-spacing: -3px;
+
             }
+
 
             .stat-grid {
+
                 grid-template-columns: repeat(2, 1fr);
+
             }
 
+
             .stat {
+
                 border-bottom: 1px solid rgba(255,255,255,.2);
+
             }
+
 
             .about-grid,
             .featured-grid,
@@ -1050,73 +1509,116 @@
             .social-header,
             .skills-grid,
             .podcast-card {
+
                 grid-template-columns: 1fr;
+
             }
 
+
             .experience-item {
+
                 grid-template-columns: 1fr;
 
                 gap: 15px;
+
             }
+
 
             .video-grid {
+
                 grid-template-columns: 1fr;
+
             }
 
+
             .video-card {
+
+                width: 100%;
+
                 max-width: 420px;
 
                 margin: auto;
+
             }
+
 
             .podcast-content {
+
                 padding: 40px;
+
             }
+
 
             section {
+
                 padding: 80px 0;
+
             }
 
+
             .footer-container {
+
                 flex-direction: column;
+
             }
 
         }
 
+
     </style>
+
 </head>
+
 
 
 <body>
 
 
-<!-- ==============================
+
+<!-- ==========================================
      NAVIGATION
-================================ -->
+=========================================== -->
 
 <nav>
 
     <div class="nav-container">
 
         <a href="#home" class="logo">
+
             TR
+
         </a>
+
 
         <ul class="nav-links">
 
-            <li><a href="#about">About</a></li>
+            <li>
+                <a href="#about">About</a>
+            </li>
 
-            <li><a href="#experience">Experience</a></li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
 
-            <li><a href="#projects">Work</a></li>
+            <li>
+                <a href="#projects">Work</a>
+            </li>
 
-            <li><a href="#social">Social</a></li>
+            <li>
+                <a href="#social">Social</a>
+            </li>
 
-            <li><a href="#podcast">Podcast</a></li>
+            <li>
+                <a href="#podcast">Podcast</a>
+            </li>
 
-            <li><a href="#skills">Skills</a></li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
 
-            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
 
         </ul>
 
@@ -1126,29 +1628,43 @@
 
 
 
-<!-- ==============================
+<!-- ==========================================
      HERO
-================================ -->
+=========================================== -->
 
-<header class="hero" id="home">
+<header
+    class="hero"
+    id="home">
 
     <div class="container hero-content">
 
+
         <p class="eyebrow">
-            Journalism · Media · Storytelling
+
+            Journalism · Media · Marketing · Storytelling
+
         </p>
 
+
         <h1>
+
             Alondra <span>Taj</span> Robles
+
         </h1>
+
 
         <p class="hero-description">
 
             Multimedia journalist, communications professional,
-            and digital storyteller creating work at the intersection
-            of <strong>culture, community, visual storytelling, and media.</strong>
+            marketer, and digital storyteller creating work at
+            the intersection of
+
+            <strong>
+                culture, community, strategy, and visual storytelling.
+            </strong>
 
         </p>
+
 
         <div class="hero-details">
 
@@ -1158,21 +1674,34 @@
 
             <span>Journalism</span>
 
+            <span>Marketing</span>
+
             <span>Los Angeles, CA</span>
 
         </div>
 
+
         <div class="buttons">
 
-            <a href="#projects" class="button button-primary">
+            <a
+                href="#projects"
+                class="button button-primary">
+
                 Explore My Work ↓
+
             </a>
 
-            <a href="#contact" class="button">
+
+            <a
+                href="#contact"
+                class="button">
+
                 Let's Connect
+
             </a>
 
         </div>
+
 
     </div>
 
@@ -1180,13 +1709,14 @@
 
 
 
-<!-- ==============================
-     METRICS
-================================ -->
+<!-- ==========================================
+     IMPACT STATS
+=========================================== -->
 
 <section class="stats">
 
     <div class="container stat-grid">
+
 
         <div class="stat">
 
@@ -1196,13 +1726,15 @@
 
         </div>
 
+
         <div class="stat">
 
-            <h2>80K+</h2>
+            <h2>100K+</h2>
 
-            <p>Social Likes</p>
+            <p>Marketing Content Views</p>
 
         </div>
+
 
         <div class="stat">
 
@@ -1212,13 +1744,15 @@
 
         </div>
 
+
         <div class="stat">
 
-            <h2>∞</h2>
+            <h2>20+</h2>
 
-            <p>Stories To Tell</p>
+            <p>Years of Media Archived</p>
 
         </div>
+
 
     </div>
 
@@ -1226,435 +1760,909 @@
 
 
 
-<!-- ==============================
+<!-- ==========================================
      ABOUT
-================================ -->
+=========================================== -->
 
 <section id="about">
 
+
     <div class="container">
 
+
         <p class="section-label">
+
             01 — About
+
         </p>
 
+
         <h2 class="section-title">
+
             Stories matter most when people can see themselves in them.
+
         </h2>
+
 
 
         <div class="about-grid">
 
 
+
             <div class="about-text">
+
 
                 <p class="about-lead">
 
-                    I'm a multimedia storyteller interested in the
-                    people, communities, and experiences that often
-                    exist outside the center of a camera frame.
+                    I'm a multimedia storyteller interested in
+                    the people, communities, and experiences
+                    that often exist outside the center of a camera frame.
 
                 </p>
+
 
                 <p>
 
                     My work moves across journalism, communications,
-                    social media, photography, video, broadcasting,
-                    podcasting, and interactive storytelling.
+                    marketing, social media, photography, video,
+                    broadcasting, podcasting, and interactive storytelling.
 
                 </p>
+
 
                 <p>
 
                     At UC Berkeley, I've developed stories exploring
-                    community, identity, housing, labor, culture, and
-                    representation while also producing content for
-                    student organizations and audiences across digital platforms.
+                    community, identity, housing, labor, culture,
+                    and representation while also producing campaigns,
+                    content, and communications for organizations
+                    across digital platforms.
 
                 </p>
+
 
                 <p>
 
-                    Whether I'm conducting a video interview, building an
-                    interactive story, producing social media content,
-                    working behind a broadcast camera, recording audio,
-                    or standing behind a podium, my goal remains the same:
-
-                    <strong>I want to make people feel something.</strong>
+                    My professional experience also extends beyond
+                    media production into project coordination,
+                    administrative operations, reporting,
+                    audience engagement, records management,
+                    and cross-team collaboration.
 
                 </p>
+
+
+                <p>
+
+                    Whether I'm conducting an interview,
+                    building an interactive story,
+                    producing a marketing campaign,
+                    managing a deadline-driven project,
+                    working behind a broadcast camera,
+                    or standing behind a podium,
+                    my goal remains the same:
+
+                    <strong>
+                        I want to make people feel something.
+                    </strong>
+
+                </p>
+
 
             </div>
 
 
+
             <div class="about-visual">
+
 
                 <div class="about-image-wrap">
 
+
                     <!--
-                    PUT YOUR PHOTO INSIDE:
-                    images/taj-about.png
+                    YOUR FOLDER STRUCTURE:
+
+                    Alondra Taj Robles Portfolio/
+                    ├── index.html
+                    └── images/
+                        └── taj-about.png
                     -->
+
 
                     <img
                         src="images/taj-about.png"
-                        alt="Portrait of Taj Robles"
+                        alt="Portrait of Alondra Taj Robles"
                         class="about-image"
                     >
 
+
                 </div>
+
 
 
                 <div class="about-card">
 
+
                     <h3>
+
                         Education
+
                     </h3>
 
-                    <p>
-                        <strong>University of California, Berkeley</strong>
-                    </p>
 
                     <p>
+
+                        <strong>
+                            University of California, Berkeley
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
                         B.A. Media Studies
+
                     </p>
 
+
                     <p>
+
                         Emphasis in <em>Digital Studies</em>
+
                     </p>
 
+
                     <p>
+
                         Minor in Journalism
+
                     </p>
+
 
                     <br>
 
-                    <p>
-                        Class of 2026
-                    </p>
 
                     <p>
-                        Berkeley, California
+
+                        Class of 2026
+
                     </p>
+
+
+                    <p>
+
+                        Berkeley, California
+
+                    </p>
+
 
                 </div>
+
 
             </div>
 
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- ==============================
+<!-- ==========================================
      EXPERIENCE
-================================ -->
+=========================================== -->
 
 <section
     class="experience-section"
     id="experience">
 
+
     <div class="container">
 
+
         <p class="section-label">
+
             02 — Experience
+
         </p>
 
+
         <h2 class="section-title">
-            Where I've reported, created, produced, and connected!
+
+            Where creativity meets strategy, organization, and execution.
+
         </h2>
 
 
 
-        <!-- UC BERKELEY LABOR CENTER -->
+        <!-- ======================================
+             UC BERKELEY LABOR CENTER
+        ======================================= -->
 
         <div class="experience-item">
 
+
             <div class="experience-date">
+
                 2025 — Present
+
             </div>
+
 
             <div class="experience-content">
 
+
                 <h3>
+
                     Communications Intern
+
                 </h3>
 
+
                 <div class="experience-company">
+
                     UC Berkeley Labor Center
+
                 </div>
+
 
                 <p>
 
-                    Supported digital communications and multimedia
-                    accessibility initiatives, including video captioning,
-                    archival organization, digital asset management research,
-                    donor communications, and content operations.
+                    Manage communications, digital assets,
+                    and accessibility-focused projects across
+                    a fast-moving research organization.
+
+                    Conducted quality assurance and accessibility
+                    review for approximately 30 public-facing videos,
+                    organized and migrated a 20+ year digital media
+                    archive, resolved metadata inconsistencies,
+                    and collaborated across teams to manage
+                    competing requests and deadlines.
 
                 </p>
 
+
                 <div class="tags">
 
-                    <span class="tag">Communications</span>
-                    <span class="tag">Accessibility</span>
-                    <span class="tag">Salesforce</span>
-                    <span class="tag">Digital Archives</span>
+                    <span class="tag">
+                        Communications
+                    </span>
+
+                    <span class="tag">
+                        Project Coordination
+                    </span>
+
+                    <span class="tag">
+                        Quality Assurance
+                    </span>
+
+                    <span class="tag">
+                        Accessibility
+                    </span>
+
+                    <span class="tag">
+                        Digital Asset Management
+                    </span>
+
+                    <span class="tag">
+                        Data Organization
+                    </span>
+
+                    <span class="tag">
+                        Deadline Management
+                    </span>
 
                 </div>
 
+
             </div>
+
 
         </div>
 
 
 
-        <!-- LBSA -->
+        <!-- ======================================
+             LBSA
+        ======================================= -->
 
         <div class="experience-item">
 
-            <div class="experience-date">
-                2025 — Present
-            </div>
-
-            <div class="experience-content">
-
-                <h3>
-                    Marketing Intern
-                </h3>
-
-                <div class="experience-company">
-                    Latinx Business Student Association (LBSA)
-                </div>
-
-                <p>
-
-                    Created social campaigns, graphics, event promotions,
-                    photography, interviews, and digital content designed
-                    to strengthen community engagement and spotlight
-                    Latinx student leadership. Served as a primary
-                    photographer across 50+ events.
-
-                </p>
-
-                <div class="tags">
-
-                    <span class="tag">Social Media</span>
-                    <span class="tag">Graphic Design</span>
-                    <span class="tag">Photography</span>
-                    <span class="tag">Bilingual Content</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- CAL ICE HOCKEY -->
-
-        <div class="experience-item">
 
             <div class="experience-date">
+
                 2025 — 2026
+
             </div>
+
 
             <div class="experience-content">
 
+
                 <h3>
-                    Broadcast Production Assistant
+
+                    Marketing Intern
+
                 </h3>
 
+
                 <div class="experience-company">
-                    Cal Ice Hockey
+
+                    Latinx Business Student Association (LBSA)
+
                 </div>
+
 
                 <p>
 
-                    Supported live sports broadcasts through camera
-                    operation, scoreboard management, livestream production,
-                    highlight creation, social media, and real-time
-                    visual storytelling.
+                    Developed and executed multimedia marketing
+                    campaigns across social and internal platforms,
+                    creating event graphics, apparel designs,
+                    photography, video, interviews,
+                    and promotional assets.
+
+                    Helped generate more than 100K social media views,
+                    coordinated messaging across student teams,
+                    tracked attendance and engagement data,
+                    and supported outreach, partnerships,
+                    programming, and brand development.
 
                 </p>
 
+
                 <div class="tags">
 
-                    <span class="tag">Broadcast</span>
-                    <span class="tag">Camera</span>
-                    <span class="tag">Live Production</span>
-                    <span class="tag">Sports Media</span>
+                    <span class="tag">
+                        Marketing Strategy
+                    </span>
+
+                    <span class="tag">
+                        Social Media
+                    </span>
+
+                    <span class="tag">
+                        Brand Messaging
+                    </span>
+
+                    <span class="tag">
+                        Campaign Planning
+                    </span>
+
+                    <span class="tag">
+                        Photography
+                    </span>
+
+                    <span class="tag">
+                        Graphic Design
+                    </span>
+
+                    <span class="tag">
+                        Audience Engagement
+                    </span>
+
+                    <span class="tag">
+                        Data Tracking
+                    </span>
 
                 </div>
 
+
             </div>
+
 
         </div>
 
 
 
-        <!-- CAL BEAR MEDIA -->
+        <!-- ======================================
+             RAICES
+        ======================================= -->
 
         <div class="experience-item">
 
+
             <div class="experience-date">
-                2025 — Present
+
+                2025 — 2026
+
             </div>
+
 
             <div class="experience-content">
 
+
                 <h3>
-                    Founder
+
+                    Outreach Fellow
+
                 </h3>
 
+
                 <div class="experience-company">
-                    Cal Bear Media
+
+                    RAÍCES · UC Berkeley
+
                 </div>
+
 
                 <p>
 
-                    Founded a student-focused media community centered
-                    around content creation, photography, creative
-                    collaboration, workshops, and documenting campus culture.
+                    Supported strategic outreach and community
+                    engagement initiatives by developing
+                    audience-facing communications,
+                    event invitations, social media content,
+                    presentations, graphics, and informational materials.
+
+                    Helped translate complex topics into accessible
+                    messaging while supporting programming focused
+                    on access, representation, and student engagement.
 
                 </p>
 
+
                 <div class="tags">
 
-                    <span class="tag">Leadership</span>
-                    <span class="tag">Content Creation</span>
-                    <span class="tag">Community</span>
+                    <span class="tag">
+                        Strategic Outreach
+                    </span>
+
+                    <span class="tag">
+                        Community Engagement
+                    </span>
+
+                    <span class="tag">
+                        Event Promotion
+                    </span>
+
+                    <span class="tag">
+                        Presentations
+                    </span>
+
+                    <span class="tag">
+                        Copywriting
+                    </span>
+
+                    <span class="tag">
+                        Visual Communications
+                    </span>
 
                 </div>
 
+
             </div>
 
+
         </div>
+
+
+
+        <!-- ======================================
+             RALPHS
+        ======================================= -->
+
+        <div class="experience-item">
+
+
+            <div class="experience-date">
+
+                2019 — Present
+
+            </div>
+
+
+            <div class="experience-content">
+
+
+                <h3>
+
+                    Bookkeeper & Administrative Assistant
+
+                </h3>
+
+
+                <div class="experience-company">
+
+                    Ralphs · Kroger
+
+                </div>
+
+
+                <p>
+
+                    Manage administrative and financial operations
+                    in a high-volume retail environment,
+                    including Kronos timekeeping,
+                    weekly payroll, cash reporting,
+                    financial documentation,
+                    employee support, and confidential records.
+
+                    Prepare and audit daily and weekly financial reports,
+                    review six-figure cash statements for accuracy,
+                    communicate procedural updates,
+                    and balance multiple operational priorities
+                    under strict deadlines.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Administration
+                    </span>
+
+                    <span class="tag">
+                        Payroll
+                    </span>
+
+                    <span class="tag">
+                        Kronos
+                    </span>
+
+                    <span class="tag">
+                        Financial Reporting
+                    </span>
+
+                    <span class="tag">
+                        Confidential Records
+                    </span>
+
+                    <span class="tag">
+                        Operations
+                    </span>
+
+                    <span class="tag">
+                        Data Accuracy
+                    </span>
+
+                    <span class="tag">
+                        Team Support
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ======================================
+             CAL ICE HOCKEY
+        ======================================= -->
+
+        <div class="experience-item">
+
+
+            <div class="experience-date">
+
+                2025 — 2026
+
+            </div>
+
+
+            <div class="experience-content">
+
+
+                <h3>
+
+                    Broadcasting Intern
+
+                </h3>
+
+
+                <div class="experience-company">
+
+                    UC Berkeley Ice Hockey
+
+                </div>
+
+
+                <p>
+
+                    Supported live sports production through
+                    camera operation, real-time broadcast support,
+                    equipment troubleshooting,
+                    digital storytelling,
+                    and coverage of team and fan experiences.
+
+                    Adapted quickly in a live production environment
+                    while helping deliver engaging visual coverage
+                    for streaming audiences.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Broadcast Production
+                    </span>
+
+                    <span class="tag">
+                        Camera Operation
+                    </span>
+
+                    <span class="tag">
+                        Live Media
+                    </span>
+
+                    <span class="tag">
+                        Troubleshooting
+                    </span>
+
+                    <span class="tag">
+                        Sports Storytelling
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ======================================
+             CAL BEAR MEDIA
+        ======================================= -->
+
+        <div class="experience-item">
+
+
+            <div class="experience-date">
+
+                2025 — Present
+
+            </div>
+
+
+            <div class="experience-content">
+
+
+                <h3>
+
+                    Founder
+
+                </h3>
+
+
+                <div class="experience-company">
+
+                    Cal Bear Media
+
+                </div>
+
+
+                <p>
+
+                    Founded a student-focused creative media
+                    community centered on photography,
+                    content production, workshops,
+                    collaborative shoots,
+                    and documenting student culture.
+
+                    Coordinate creative concepts and projects
+                    while building opportunities for students
+                    to develop practical media experience.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Leadership
+                    </span>
+
+                    <span class="tag">
+                        Project Management
+                    </span>
+
+                    <span class="tag">
+                        Creative Direction
+                    </span>
+
+                    <span class="tag">
+                        Photography
+                    </span>
+
+                    <span class="tag">
+                        Content Production
+                    </span>
+
+                    <span class="tag">
+                        Community Building
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
 
     </div>
+
 
 </section>
 
 
 
-<!-- ==============================
-     FEATURED SPEECH
-================================ -->
+<!-- ==========================================
+     FEATURED GRADUATION SPEECH
+=========================================== -->
 
 <section class="featured">
 
+
     <div class="container">
 
+
         <p class="section-label">
+
             Featured Story
+
         </p>
+
 
 
         <div class="featured-grid">
 
+
             <div>
 
+
                 <div class="featured-number">
+
                     480K+
+
                 </div>
+
 
             </div>
 
 
+
             <div class="featured-content">
 
+
                 <h3>
+
                     A graduation speech that traveled far beyond Berkeley.
+
                 </h3>
+
 
                 <p>
 
-                    Selected as a student speaker for UC Berkeley's
-                    Chicanx/Latinx Graduation, I delivered a bilingual
-                    speech centered on family, education, grief,
+                    Selected as a student speaker for
+                    UC Berkeley's Chicanx/Latinx Graduation,
+                    I delivered a bilingual speech centered
+                    on family, education, grief,
                     resilience, and liberation.
 
                 </p>
 
+
                 <p>
 
                     The speech later reached hundreds of thousands
-                    of viewers online, showing me firsthand how one
-                    deeply personal story can become a shared one.
+                    of viewers online, showing me firsthand
+                    how one deeply personal story can become a shared one.
 
                 </p>
+
 
                 <a
                     href="https://www.tiktok.com/@itstajro/video/7641481524684147998"
                     target="_blank"
                     class="button"
-                    style="border-color:white;color:white;">
+                    style="
+                        border-color:white;
+                        color:white;
+                    ">
 
                     Watch the Speech →
 
                 </a>
 
+
             </div>
+
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- ==============================
-     PROJECTS
-================================ -->
+<!-- ==========================================
+     SELECTED WORK
+=========================================== -->
 
 <section id="projects">
 
+
     <div class="container">
 
+
         <p class="section-label">
+
             03 — Selected Work
+
         </p>
 
+
         <h2 class="section-title">
-            Journalism, multimedia, social, and visual storytelling.
+
+            Journalism, multimedia, strategy, and visual storytelling.
+
         </h2>
+
 
 
         <div class="project-grid">
 
 
-            <!-- HOUSING STORY -->
+
+            <!-- HOUSING -->
 
             <article class="project-card">
 
+
                 <div>
 
+
                     <div class="project-type">
+
                         Interactive Journalism
+
                     </div>
 
+
                     <h3>
+
                         When New Housing Meets Old Streets
+
                     </h3>
+
 
                     <p>
 
                         A multimedia investigation into housing density
-                        and the growing fight for street parking in
-                        Los Angeles' San Fernando Valley.
+                        and the growing fight for street parking
+                        in Los Angeles' San Fernando Valley.
 
                     </p>
 
+
                 </div>
 
-                <a href="#" class="project-link">
+
+                <a
+                    href="#"
+                    class="project-link">
+
                     View Story →
+
                 </a>
+
 
             </article>
 
@@ -1664,15 +2672,23 @@
 
             <article class="project-card">
 
+
                 <div>
 
+
                     <div class="project-type">
+
                         Multimedia Journalism
+
                     </div>
 
+
                     <h3>
+
                         The Heart Behind the World Cup
+
                     </h3>
+
 
                     <p>
 
@@ -1682,44 +2698,66 @@
 
                     </p>
 
+
                 </div>
 
-                <a href="#" class="project-link">
+
+                <a
+                    href="#"
+                    class="project-link">
+
                     View Project →
+
                 </a>
+
 
             </article>
 
 
 
-            <!-- REPRESENTATION -->
+            <!-- LATINX REPRESENTATION -->
 
             <article class="project-card">
 
+
                 <div>
 
+
                     <div class="project-type">
+
                         Reporting
+
                     </div>
 
+
                     <h3>
+
                         Who Gets Represented?
+
                     </h3>
+
 
                     <p>
 
-                        Reporting on Latinx representation at UC Berkeley
-                        and the experiences of students whose identities
-                        are sometimes overlooked within broader
-                        Latinx campus spaces.
+                        Reporting on Latinx representation
+                        at UC Berkeley and the experiences
+                        of students whose identities are sometimes
+                        overlooked within broader Latinx campus spaces.
 
                     </p>
 
+
                 </div>
 
-                <a href="#" class="project-link">
+
+                <a
+                    href="#"
+                    class="project-link">
+
                     Read Story →
+
                 </a>
+
 
             </article>
 
@@ -1729,58 +2767,84 @@
 
             <article class="project-card">
 
+
                 <div>
 
+
                     <div class="project-type">
-                        Investigation
+
+                        Investigative Journalism
+
                     </div>
 
+
                     <h3>
+
                         YoursTruly
+
                     </h3>
+
 
                     <p>
 
                         An investigative journalism project examining
-                        consumer complaints, fulfillment issues, refunds,
-                        brand loyalty, and accountability surrounding
-                        an independent apparel company.
+                        consumer complaints, fulfillment issues,
+                        refunds, brand loyalty, and accountability
+                        surrounding an independent apparel company.
 
                     </p>
 
+
                 </div>
 
-                <a href="#" class="project-link">
+
+                <a
+                    href="#"
+                    class="project-link">
+
                     Explore Reporting →
+
                 </a>
+
 
             </article>
 
 
 
-            <!-- PODCAST PROJECT -->
+            <!-- PODCAST -->
 
             <article class="project-card">
 
+
                 <div>
 
+
                     <div class="project-type">
+
                         Audio Storytelling
+
                     </div>
 
+
                     <h3>
+
                         Blooming Out the Concrete Jungle
+
                     </h3>
+
 
                     <p>
 
                         An example of my audio and podcast storytelling work,
-                        demonstrating narrative structure, voice, interviewing,
+                        demonstrating narrative structure,
+                        voice, interviewing,
                         and digital audio production.
 
                     </p>
 
+
                 </div>
+
 
                 <a
                     href="https://www.piercemediaarts.com/kpcradio/blooming-out-the-concrete-junge-ep-3/article_e0904c6a-29fb-41fe-9632-c6e975ee34ef.html"
@@ -1791,34 +2855,45 @@
 
                 </a>
 
+
             </article>
 
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- ==============================
-     SOCIAL VIDEO WORK
-================================ -->
+<!-- ==========================================
+     SOCIAL STORYTELLING
+=========================================== -->
 
 <section
     class="social-work"
     id="social">
 
+
     <div class="container">
+
+
 
         <div class="social-header">
 
+
             <div>
 
+
                 <p class="section-label">
+
                     04 — Social Storytelling
+
                 </p>
+
 
                 <h2
                     class="section-title"
@@ -1828,41 +2903,51 @@
 
                 </h2>
 
+
             </div>
+
 
 
             <p class="social-intro">
 
                 Journalism doesn't always begin with a headline.
-                Sometimes it starts with a camera, a moment,
-                and a story worth stopping for.
+
+                Sometimes it starts with a camera,
+                a moment, and a story worth stopping for.
 
                 This is a collection of my short-form video,
-                social media, reporting, and creative work.
+                social media, reporting,
+                marketing, and creative work.
 
             </p>
 
+
         </div>
+
 
 
         <div class="video-grid">
 
 
-            <!-- =========================
+
+            <!-- ==================================
                  VIDEO 1 — VIRAL SPEECH
-            ========================== -->
+            =================================== -->
 
             <article class="video-card">
 
+
                 <div class="video-frame">
+
 
                     <blockquote
                         class="tiktok-embed"
                         cite="https://www.tiktok.com/@itstajro/video/7641481524684147998"
-                        data-video-id="7641481524684147998"
-                        style="max-width:605px;min-width:325px;">
+                        data-video-id="7641481524684147998">
+
 
                         <section>
+
 
                             <a
                                 target="_blank"
@@ -1873,127 +2958,186 @@
 
                             </a>
 
+
                         </section>
+
 
                     </blockquote>
 
+
                 </div>
+
 
 
                 <div class="video-info">
 
+
                     <span class="video-platform">
+
                         TikTok · UC Berkeley
+
                     </span>
 
+
                     <h3>
+
                         3 Pilares, 3 Pillars
+
                     </h3>
+
 
                     <p>
 
-                        My UC Berkeley Chicanx/Latinx Graduation speech
-                        centered on family, resilience, education, grief,
-                        and liberation. The speech went viral on TikTok
-                        and reached hundreds of thousands of viewers.
+                        My bilingual UC Berkeley
+                        Chicanx/Latinx Graduation speech explored
+                        family, grief, education,
+                        resilience, and liberation.
+
+                        The speech reached hundreds of thousands
+                        of viewers across social media.
 
                     </p>
 
+
                 </div>
+
 
             </article>
 
 
 
-            <!-- =========================
+            <!-- ==================================
                  VIDEO 2
-            ========================== -->
+            =================================== -->
 
             <article class="video-card">
 
-                <div class="video-frame">
+
+                <div class="placeholder-frame">
+
 
                     <div class="video-placeholder">
 
+
                         <div class="video-placeholder-number">
+
                             02
+
                         </div>
 
+
                         <p>
+
                             Future Reel / TikTok
+
                         </p>
+
 
                     </div>
 
+
                 </div>
+
 
 
                 <div class="video-info">
 
+
                     <span class="video-platform">
+
                         Instagram / TikTok
+
                     </span>
 
+
                     <h3>
+
                         Future Video Project
+
                     </h3>
+
 
                     <p>
 
-                        Add a short description explaining
-                        what you created, your role, and
-                        what the piece accomplished.
+                        This space is ready for a social campaign,
+                        interview, event recap,
+                        marketing project,
+                        or other short-form story.
 
                     </p>
 
+
                 </div>
+
 
             </article>
 
 
 
-            <!-- =========================
+            <!-- ==================================
                  VIDEO 3
-            ========================== -->
+            =================================== -->
 
             <article class="video-card">
 
-                <div class="video-frame">
+
+                <div class="placeholder-frame">
+
 
                     <div class="video-placeholder">
 
+
                         <div class="video-placeholder-number">
+
                             03
+
                         </div>
 
+
                         <p>
+
                             Future Reel / TikTok
+
                         </p>
+
 
                     </div>
 
+
                 </div>
+
 
 
                 <div class="video-info">
 
+
                     <span class="video-platform">
+
                         Instagram / TikTok
+
                     </span>
 
+
                     <h3>
+
                         Future Video Project
+
                     </h3>
+
 
                     <p>
 
-                        Use this space for a journalism video,
-                        campaign, interview, broadcast clip,
-                        or other short-form project.
+                        Use this space for journalism,
+                        broadcast work,
+                        branded content,
+                        event coverage,
+                        or another creative project.
 
                     </p>
 
+
                 </div>
+
 
             </article>
 
@@ -2001,7 +3145,9 @@
         </div>
 
 
+
         <div class="social-buttons">
+
 
             <a
                 href="https://www.tiktok.com/@itstajro"
@@ -2012,229 +3158,384 @@
 
             </a>
 
-            <!-- ADD INSTAGRAM LINK LATER -->
-
-            <a
-                href="#"
-                class="button">
-
-                Instagram Coming Soon
-
-            </a>
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- ==============================
+<!-- ==========================================
      PODCAST FEATURE
-================================ -->
+=========================================== -->
 
 <section
     class="podcast-section"
     id="podcast">
 
+
     <div class="container">
+
 
 
         <div class="podcast-card">
 
 
+
             <div class="podcast-art">
 
+
                 <div class="podcast-icon">
+
                     ◉
+
                 </div>
+
 
             </div>
 
 
+
             <div class="podcast-content">
 
+
                 <p class="section-label">
+
                     05 — Audio Storytelling
+
                 </p>
 
+
                 <h3>
+
                     Blooming Out the Concrete Jungle
+
                 </h3>
+
 
                 <p>
 
                     Audio gives storytelling a different kind of intimacy.
-                    This podcast example highlights my experience working
-                    with voice, narrative structure, interviews, and
-                    digital audio storytelling.
+
+                    This podcast example highlights my experience
+                    working with voice, narrative structure,
+                    interviews, and digital audio storytelling.
 
                 </p>
 
+
                 <div>
+
 
                     <a
                         href="https://www.piercemediaarts.com/kpcradio/blooming-out-the-concrete-junge-ep-3/article_e0904c6a-29fb-41fe-9632-c6e975ee34ef.html"
                         target="_blank"
                         class="button"
-                        style="border-color:white;color:white;">
+                        style="
+                            border-color:white;
+                            color:white;
+                        ">
 
                         Listen to the Episode →
 
                     </a>
 
+
                 </div>
+
 
             </div>
 
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- ==============================
+<!-- ==========================================
      SKILLS
-================================ -->
+=========================================== -->
 
 <section
     class="skills-section"
     id="skills">
 
+
     <div class="container">
 
+
         <p class="section-label">
+
             06 — Skills & Tools
+
         </p>
 
+
         <h2 class="section-title">
-            What I bring to the story.
+
+            What I bring to the story — and the team behind it.
+
         </h2>
+
 
 
         <div class="skills-grid">
 
 
+
+            <!-- JOURNALISM -->
+
             <div class="skills-column">
 
+
                 <h3>
+
                     Journalism
+
                 </h3>
+
 
                 <ul>
 
                     <li>Reporting</li>
+
                     <li>Interviewing</li>
+
                     <li>Investigative Journalism</li>
+
                     <li>AP Style</li>
+
                     <li>Multimedia Storytelling</li>
+
                     <li>Data Journalism</li>
+
                     <li>Podcasting</li>
+
                     <li>Spanish-Language Interviews</li>
 
                 </ul>
 
+
             </div>
 
 
+
+            <!-- MARKETING -->
+
             <div class="skills-column">
 
+
                 <h3>
-                    Creative
+
+                    Marketing
+
                 </h3>
+
+
+                <ul>
+
+                    <li>Marketing Campaign Planning</li>
+
+                    <li>Audience Analysis</li>
+
+                    <li>Social Media Strategy</li>
+
+                    <li>Brand Messaging</li>
+
+                    <li>Content Development</li>
+
+                    <li>Event Promotion</li>
+
+                    <li>Community Engagement</li>
+
+                    <li>Copywriting</li>
+
+                </ul>
+
+
+            </div>
+
+
+
+            <!-- ADMINISTRATIVE -->
+
+            <div class="skills-column">
+
+
+                <h3>
+
+                    Operations
+
+                </h3>
+
+
+                <ul>
+
+                    <li>Project Coordination</li>
+
+                    <li>Event Coordination</li>
+
+                    <li>Deadline Management</li>
+
+                    <li>Payroll</li>
+
+                    <li>Financial Reporting</li>
+
+                    <li>Confidential Records</li>
+
+                    <li>Data Entry & Reporting</li>
+
+                    <li>Cross-Team Collaboration</li>
+
+                </ul>
+
+
+            </div>
+
+
+
+            <!-- CREATIVE + TOOLS -->
+
+            <div class="skills-column">
+
+
+                <h3>
+
+                    Creative + Tools
+
+                </h3>
+
 
                 <ul>
 
                     <li>Photography</li>
+
                     <li>Video Editing</li>
+
                     <li>Broadcast Production</li>
-                    <li>Social Media</li>
-                    <li>Graphic Design</li>
-                    <li>Content Strategy</li>
-                    <li>Copywriting</li>
-                    <li>Audio Storytelling</li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="skills-column">
-
-                <h3>
-                    Tools
-                </h3>
-
-                <ul>
 
                     <li>Adobe Premiere Pro</li>
+
                     <li>Photoshop</li>
+
                     <li>Lightroom</li>
+
                     <li>Canva</li>
+
                     <li>CapCut</li>
+
                     <li>Datawrapper</li>
+
                     <li>Flourish</li>
+
                     <li>Salesforce</li>
 
+                    <li>Google Workspace</li>
+
+                    <li>Microsoft Office</li>
+
                 </ul>
+
 
             </div>
 
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- ==============================
+<!-- ==========================================
      CONTACT
-================================ -->
+=========================================== -->
 
 <section
     class="contact"
     id="contact">
 
+
     <div class="container">
 
+
         <p class="section-label">
+
             07 — Let's Connect
+
         </p>
+
 
         <h2 class="contact-title">
 
             Let's tell stories that
-            <span>matter.</span>
+
+            <span>
+
+                matter.
+
+            </span>
 
         </h2>
+
 
 
         <p class="contact-copy">
 
             I'm interested in opportunities across journalism,
-            digital media, broadcasting, communications,
-            entertainment, social media, and creative storytelling.
+            digital media, marketing, broadcasting,
+            communications, entertainment,
+            production, project coordination,
+            and creative storytelling.
 
         </p>
 
 
+
         <div class="contact-details">
 
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:itstajro@berkeley.edu">
-                    itstajro@berkeley.edu
-                </a>
-            </p>
 
             <p>
-                <strong>LinkedIn:</strong>
+
+                <strong>
+
+                    Email:
+
+                </strong>
+
+
+                <a
+                    href="mailto:itstajro@berkeley.edu">
+
+                    itstajro@berkeley.edu
+
+                </a>
+
+            </p>
+
+
+
+            <p>
+
+                <strong>
+
+                    LinkedIn:
+
+                </strong>
+
+
                 <a
                     href="https://www.linkedin.com/in/tajrobles/"
                     target="_blank">
@@ -2242,10 +3543,20 @@
                     linkedin.com/in/tajrobles
 
                 </a>
+
             </p>
 
+
+
             <p>
-                <strong>TikTok:</strong>
+
+                <strong>
+
+                    TikTok:
+
+                </strong>
+
+
                 <a
                     href="https://www.tiktok.com/@itstajro"
                     target="_blank">
@@ -2253,12 +3564,16 @@
                     @itstajro
 
                 </a>
+
             </p>
+
 
         </div>
 
 
+
         <div class="contact-links">
+
 
 
             <a
@@ -2268,6 +3583,7 @@
                 Email Me
 
             </a>
+
 
 
             <a
@@ -2280,6 +3596,7 @@
             </a>
 
 
+
             <a
                 href="https://www.tiktok.com/@itstajro"
                 target="_blank"
@@ -2288,6 +3605,7 @@
                 TikTok ↗
 
             </a>
+
 
 
             <a
@@ -2300,56 +3618,74 @@
             </a>
 
 
-            <!--
-            WHEN YOU UPLOAD YOUR RESUME,
-            REPLACE # WITH SOMETHING LIKE:
 
-            href="documents/Taj-Robles-Resume.pdf"
-            -->
+            <!-- ==================================
+                 RESUME
+
+                 Put your PDF here:
+
+                 Alondra Taj Robles Portfolio/
+                 └── documents/
+                     └── Taj-Robles-Resume.pdf
+            =================================== -->
+
 
             <a
-                href="#"
+                href="documents/Taj-Robles-Resume.pdf"
+                target="_blank"
                 class="button">
 
-                Résumé Coming Soon
+                View Résumé ↗
 
             </a>
 
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- ==============================
+<!-- ==========================================
      FOOTER
-================================ -->
+=========================================== -->
 
 <footer>
 
+
     <div class="footer-container">
 
-        <p>
-            © 2026 Alondra Taj Robles
-        </p>
 
         <p>
-            Multimedia Journalist · Storyteller · Creator
+
+            © 2026 Alondra Taj Robles
+
         </p>
+
+
+        <p>
+
+            Multimedia Journalist · Marketer · Storyteller · Creator
+
+        </p>
+
 
     </div>
+
 
 </footer>
 
 
 
-<!-- ==============================
+<!-- ==========================================
      TIKTOK EMBED SCRIPT
-     ONLY INCLUDE ONCE
-================================ -->
+
+     KEEP THIS ONLY ONCE.
+=========================================== -->
 
 <script
     async
@@ -2357,5 +3693,7 @@
 </script>
 
 
+
 </body>
+
 </html>
