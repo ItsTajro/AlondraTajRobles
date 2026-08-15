@@ -501,7 +501,7 @@
 
             letter-spacing: 4px;
 
-            font-weight: 700;
+            font-weight: 600;
 
             margin-bottom: 15px;
 
@@ -790,7 +790,7 @@
 
             grid-template-columns: .9fr 1.1fr;
 
-            gap: 70px;
+            gap: 60px;
 
             align-items: center;
 
@@ -845,7 +845,7 @@
 
             grid-template-columns: repeat(2, 1fr);
 
-            gap: 30px;
+            gap: 25px;
 
         }
 
@@ -955,6 +955,145 @@
 
         }
 
+
+
+
+        /* ==========================================
+           GRAPHIC DESIGN
+        =========================================== */
+
+        .design-section {
+            background: var(--cream);
+        }
+
+        .design-header {
+            display: grid;
+            grid-template-columns: 1fr .9fr;
+            gap: 55px;
+            align-items: end;
+            margin-bottom: 45px;
+        }
+
+        .design-intro {
+            max-width: 560px;
+            font-size: 1rem;
+            color: rgba(34, 23, 19, .78);
+        }
+
+        .design-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .design-card {
+            background: var(--white);
+            border: 1px solid rgba(34, 23, 19, .12);
+            min-width: 0;
+            overflow: hidden;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .design-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 34px rgba(34, 23, 19, .10);
+        }
+
+        .design-image-wrap {
+            aspect-ratio: 4 / 5;
+            background: var(--soft-cream);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        .design-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .design-info {
+            padding: 18px 20px 22px;
+        }
+
+        .design-type {
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .65rem;
+            font-weight: 700;
+        }
+
+        .design-info h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.35rem;
+            line-height: 1.15;
+            margin: 7px 0 8px;
+        }
+
+        .design-info p {
+            font-size: .84rem;
+            line-height: 1.55;
+            color: rgba(34, 23, 19, .72);
+        }
+
+        .design-card.recognition-card {
+            border: 2px solid var(--yellow);
+        }
+
+        .recognition-card .design-image-wrap {
+            background: #EEE9DF;
+        }
+
+        .recognition-badge {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 10px;
+            background: var(--yellow);
+            color: var(--dark);
+            font-size: .65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+        }
+
+        .design-placeholder {
+            width: 100%;
+            height: 100%;
+            border: 2px dashed rgba(34, 23, 19, .24);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            color: rgba(34, 23, 19, .55);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(245,184,46,.12),
+                    rgba(242,106,33,.08),
+                    rgba(217,67,50,.08)
+                );
+        }
+
+        .design-placeholder-number {
+            font-family: "Playfair Display", serif;
+            font-size: 3rem;
+            line-height: 1;
+            color: var(--orange);
+            margin-bottom: 8px;
+        }
+
+        .design-placeholder p {
+            font-size: .7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            font-weight: 700;
+        }
 
 
         /* ==========================================
@@ -1524,6 +1663,21 @@
             }
 
 
+            .design-header {
+
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+            }
+
+
+            .design-grid {
+
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            }
+
+
             .video-grid {
 
                 grid-template-columns: 1fr;
@@ -1565,6 +1719,16 @@
         }
 
 
+
+
+        @media(max-width: 620px) {
+
+            .design-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
     </style>
 
 </head>
@@ -1602,6 +1766,10 @@
 
             <li>
                 <a href="#projects">Work</a>
+            </li>
+
+            <li>
+                <a href="#design">Design</a>
             </li>
 
             <li>
@@ -1676,7 +1844,7 @@
 
             <span>Marketing</span>
 
-            <span>Los Angeles, CA</span>
+            <span>Based in Los Angeles, CA</span>
 
         </div>
 
@@ -1794,7 +1962,7 @@
 
                 <p class="about-lead">
 
-                    I'm a multimedia storyteller interested in
+                    I'm an aspiring multimedia storyteller interested in
                     the people, communities, and experiences
                     that often exist outside the center of a camera frame.
 
@@ -1803,7 +1971,7 @@
 
                 <p>
 
-                    My work moves across journalism, communications,
+                    My work moves across various mediums such as journalism, communications,
                     marketing, social media, photography, video,
                     broadcasting, podcasting, and interactive storytelling.
 
@@ -1813,9 +1981,9 @@
                 <p>
 
                     At UC Berkeley, I've developed stories exploring
-                    community, identity, housing, labor, culture,
+                    community, identity, housing, labor issues, culture,
                     and representation while also producing campaigns,
-                    content, and communications for organizations
+                    content, and communications for different student organizations
                     across digital platforms.
 
                 </p>
@@ -1827,23 +1995,23 @@
                     media production into project coordination,
                     administrative operations, reporting,
                     audience engagement, records management,
-                    and cross-team collaboration.
+                    and cross-team collaborations.
 
                 </p>
 
 
                 <p>
 
-                    Whether I'm conducting an interview,
-                    building an interactive story,
+                    Whether I'm conducting on the streets conducting an interview,
+                    building an interactive story behind my computer,
                     producing a marketing campaign,
-                    managing a deadline-driven project,
+                    managing deadline-driven projects,
                     working behind a broadcast camera,
-                    or standing behind a podium,
+                    or standing behind a podium speaking to thousands,
                     my goal remains the same:
 
                     <strong>
-                        I want to make people feel something.
+                        I want to make people feel <em>something.</em>
                     </strong>
 
                 </p>
@@ -1974,7 +2142,7 @@
 
         <h2 class="section-title">
 
-            Where creativity meets strategy, organization, and execution.
+            Building where creativity meets strategy, organization, and execution.
 
         </h2>
 
@@ -1989,7 +2157,7 @@
 
             <div class="experience-date">
 
-                2025 — Present
+                August 2025 — Present
 
             </div>
 
@@ -2013,7 +2181,7 @@
 
                 <p>
 
-                    Manage communications, digital assets,
+                    Managed communications, digital assets,
                     and accessibility-focused projects across
                     a fast-moving research organization.
 
@@ -2076,7 +2244,7 @@
 
             <div class="experience-date">
 
-                2025 — 2026
+                August 2025 — June 2026
 
             </div>
 
@@ -2101,16 +2269,16 @@
                 <p>
 
                     Developed and executed multimedia marketing
-                    campaigns across social and internal platforms,
+                    campaigns across our social media and internal platforms,
                     creating event graphics, apparel designs,
-                    photography, video, interviews,
-                    and promotional assets.
+                    photographing 20+ events, video, doing interviews,
+                    and aiding with promotional assets.
 
                     Helped generate more than 100K social media views,
                     coordinated messaging across student teams,
-                    tracked attendance and engagement data,
+                    tracked engagement data,
                     and supported outreach, partnerships,
-                    programming, and brand development.
+                    programming, and overall brand development.
 
                 </p>
 
@@ -2146,7 +2314,7 @@
                     </span>
 
                     <span class="tag">
-                        Data Tracking
+                        Data Analytics
                     </span>
 
                 </div>
@@ -2168,7 +2336,7 @@
 
             <div class="experience-date">
 
-                2025 — 2026
+                August 2025 — January 2026
 
             </div>
 
@@ -2196,9 +2364,9 @@
                     engagement initiatives by developing
                     audience-facing communications,
                     event invitations, social media content,
-                    presentations, graphics, and informational materials.
+                    presentations, graphics, apparel designs and informational materials.
 
-                    Helped translate complex topics into accessible
+                    Helped translate complex topics surrounding higher education into accessible
                     messaging while supporting programming focused
                     on access, representation, and student engagement.
 
@@ -2250,7 +2418,7 @@
 
             <div class="experience-date">
 
-                2019 — Present
+                January 2019 — Present
 
             </div>
 
@@ -2297,10 +2465,6 @@
                     </span>
 
                     <span class="tag">
-                        Payroll
-                    </span>
-
-                    <span class="tag">
                         Kronos
                     </span>
 
@@ -2321,7 +2485,7 @@
                     </span>
 
                     <span class="tag">
-                        Team Support
+                        Training and Onboarding
                     </span>
 
                 </div>
@@ -2343,7 +2507,7 @@
 
             <div class="experience-date">
 
-                2025 — 2026
+                August 2025 — February 2026
 
             </div>
 
@@ -2399,7 +2563,7 @@
                     </span>
 
                     <span class="tag">
-                        Sports Storytelling
+                        Sports Interviews
                     </span>
 
                 </div>
@@ -2421,7 +2585,7 @@
 
             <div class="experience-date">
 
-                2025 — Present
+                December 2025 — Present
 
             </div>
 
@@ -2540,7 +2704,7 @@
 
                 <h3>
 
-                    A graduation speech that traveled far beyond Berkeley.
+                    A graduation speech that traveled far beyond UC Berkeley.
 
                 </h3>
 
@@ -2548,19 +2712,19 @@
                 <p>
 
                     Selected as a student speaker for
-                    UC Berkeley's Chicanx/Latinx Graduation,
+                    UC Berkeley's 2026 Chicanx/Latinx Graduation,
                     I delivered a bilingual speech centered
                     on family, education, grief,
-                    resilience, and liberation.
+                    resilience, and liberation through the power of education.
 
                 </p>
 
 
                 <p>
 
-                    The speech later reached hundreds of thousands
+                    My speech later reached hundreds of thousands
                     of viewers online, showing me firsthand
-                    how one deeply personal story can become a shared one.
+                    how one deeply personal story can become a shared one inspiring thousands.
 
                 </p>
 
@@ -2869,6 +3033,315 @@
 
 
 
+
+<!-- ==========================================
+     GRAPHIC DESIGN
+=========================================== -->
+
+<section
+    class="design-section"
+    id="design">
+
+
+    <div class="container">
+
+
+        <div class="design-header">
+
+
+            <div>
+
+                <p class="section-label">
+                    04 — Graphic Design
+                </p>
+
+                <h2
+                    class="section-title"
+                    style="margin-bottom:0;">
+
+                    Visual ideas built for people to stop, look, and engage.
+
+                </h2>
+
+            </div>
+
+
+            <p class="design-intro">
+
+                A curated selection of promotional graphics,
+                social media campaigns, event marketing,
+                and visual storytelling created for
+                student organizations and community-focused projects.
+                This gallery is intentionally limited to six pieces
+                so the work stays focused and easy to explore.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="design-grid">
+
+
+            <!-- ==================================
+                 DESIGN 1 — LBSA FLYER
+            =================================== -->
+
+            <article class="design-card">
+
+                <div class="design-image-wrap">
+
+                    <img
+                        src="images/LBSA-Flyer-01.png"
+                        alt="Graphic design flyer created by Taj Robles for UC Berkeley LBSA"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="design-info">
+
+                    <span class="design-type">
+                        Graphic Design · LBSA
+                    </span>
+
+                    <h3>
+                        LBSA Campaign Design
+                    </h3>
+
+                    <p>
+                        Promotional creative developed for
+                        UC Berkeley's Latinx Business Student Association
+                        to support event visibility and student engagement.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 DESIGN 2 — LBSA FLYER
+            =================================== -->
+
+            <article class="design-card">
+
+                <div class="design-image-wrap">
+
+                    <img
+                        src="images/LBSA-Flyer-02.png"
+                        alt="Social media graphic created by Taj Robles for UC Berkeley LBSA"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="design-info">
+
+                    <span class="design-type">
+                        Social Media · LBSA
+                    </span>
+
+                    <h3>
+                        Digital Marketing Creative
+                    </h3>
+
+                    <p>
+                        Branded social content combining
+                        audience-focused messaging,
+                        visual consistency, and promotional strategy.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 DESIGN 3 — INTERN RECOGNITION
+                 This is recognition, not a design credit.
+            =================================== -->
+
+            <article class="design-card recognition-card">
+
+                <div class="design-image-wrap">
+
+                    <img
+                        src="images/LBSA-Intern-Spotlight.png"
+                        alt="LBSA Intern of the Semester spotlight recognizing Taj Robles"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="design-info">
+
+                    <span class="design-type">
+                        Recognition · LBSA
+                    </span>
+
+                    <h3>
+                        Intern of the Semester
+                    </h3>
+
+                    <p>
+                        Recognized for supporting the marketing committee,
+                        mentoring fellow interns, contributing to internal
+                        projects, and documenting events through photography.
+                    </p>
+
+                    <span class="recognition-badge">
+                        Intern Spotlight
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 DESIGN 4 — FUTURE WORK
+            =================================== -->
+
+            <article class="design-card">
+
+                <div class="design-image-wrap">
+
+                    <div class="design-placeholder">
+
+                        <div class="design-placeholder-number">
+                            04
+                        </div>
+
+                        <p>
+                            Future Graphic Project
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="design-info">
+
+                    <span class="design-type">
+                        Coming Soon
+                    </span>
+
+                    <h3>
+                        Future Design
+                    </h3>
+
+                    <p>
+                        Replace this card with another flyer,
+                        campaign, social graphic, or branded project.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 DESIGN 5 — FUTURE WORK
+            =================================== -->
+
+            <article class="design-card">
+
+                <div class="design-image-wrap">
+
+                    <div class="design-placeholder">
+
+                        <div class="design-placeholder-number">
+                            05
+                        </div>
+
+                        <p>
+                            Future Graphic Project
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="design-info">
+
+                    <span class="design-type">
+                        Coming Soon
+                    </span>
+
+                    <h3>
+                        Future Design
+                    </h3>
+
+                    <p>
+                        Keep this space ready for a future
+                        marketing campaign or visual storytelling piece.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 DESIGN 6 — FUTURE WORK
+            =================================== -->
+
+            <article class="design-card">
+
+                <div class="design-image-wrap">
+
+                    <div class="design-placeholder">
+
+                        <div class="design-placeholder-number">
+                            06
+                        </div>
+
+                        <p>
+                            Future Graphic Project
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="design-info">
+
+                    <span class="design-type">
+                        Coming Soon
+                    </span>
+
+                    <h3>
+                        Future Design
+                    </h3>
+
+                    <p>
+                        Add another strong example here as
+                        your creative portfolio continues to grow.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
 <!-- ==========================================
      SOCIAL STORYTELLING
 =========================================== -->
@@ -2890,7 +3363,7 @@
 
                 <p class="section-label">
 
-                    04 — Social Storytelling
+                    05 — Social Storytelling
 
                 </p>
 
@@ -3205,7 +3678,7 @@
 
                 <p class="section-label">
 
-                    05 — Audio Storytelling
+                    06 — Audio Storytelling
 
                 </p>
 
@@ -3275,7 +3748,7 @@
 
         <p class="section-label">
 
-            06 — Skills & Tools
+            07 — Skills & Tools
 
         </p>
 
@@ -3473,7 +3946,7 @@
 
         <p class="section-label">
 
-            07 — Let's Connect
+            08 — Let's Connect
 
         </p>
 
