@@ -1094,6 +1094,185 @@
             letter-spacing: 1.6px;
             font-weight: 700;
         }
+        /* =========================================
+   GRAPHIC DESIGN SECTION
+========================================= */
+
+.graphics-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 6%;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 50px;
+}
+
+.section-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #d95f18;
+}
+
+.graphics-section h2 {
+    margin: 0 0 20px;
+
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.section-heading p {
+    max-width: 700px;
+    margin: 0;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+
+/* SIX-CARD GRID */
+
+.graphics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+/* INDIVIDUAL CARD */
+
+.graphic-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid
+        rgba(20, 20, 20, 0.10);
+
+    border-radius: 22px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.graphic-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 22px 45px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* IMAGE FRAME */
+
+.graphic-image {
+    width: 100%;
+    height: 390px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1eee8;
+}
+
+.graphic-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.45s ease;
+}
+
+.graphic-card:hover
+.graphic-image img {
+    transform: scale(1.025);
+}
+
+
+/* CARD COPY */
+
+.graphic-info {
+    padding: 24px 24px 28px;
+}
+
+.graphic-category {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #d95f18;
+}
+
+.graphic-info h3 {
+    margin: 0 0 10px;
+
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.graphic-info p {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+
+    opacity: 0.72;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .graphics-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .graphics-section {
+        padding:
+            75px 5%;
+    }
+
+    .graphics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .graphic-image {
+        height: 430px;
+    }
+
+}
 
 
         /* ==========================================
@@ -2610,12 +2789,12 @@
                 <p>
 
                     Founded a student-focused creative media
-                    community centered on photography,
+                    community centered around photography,
                     content production, workshops,
                     collaborative shoots,
-                    and documenting student culture.
+                    and documenting student culture at UC Berkeley.
 
-                    Coordinate creative concepts and projects
+                    I also coordinate creative concepts and projects
                     while building opportunities for students
                     to develop practical media experience.
 
@@ -2625,7 +2804,7 @@
                 <div class="tags">
 
                     <span class="tag">
-                        Leadership
+                        On-Camera interviews
                     </span>
 
                     <span class="tag">
@@ -2637,7 +2816,7 @@
                     </span>
 
                     <span class="tag">
-                        Photography
+                        Photography/Videography
                     </span>
 
                     <span class="tag">
@@ -2690,7 +2869,7 @@
 
                 <div class="featured-number">
 
-                    480K+
+                    485K+
 
                 </div>
 
@@ -2704,17 +2883,17 @@
 
                 <h3>
 
-                    A graduation speech that traveled far beyond UC Berkeley.
+                    A graduation speech that traveled far beyond UC Berkeley's campus.
 
                 </h3>
 
 
                 <p>
 
-                    Selected as a student speaker for
+                    Was selected as a student speaker for
                     UC Berkeley's 2026 Chicanx/Latinx Graduation,
-                    I delivered a bilingual speech centered
-                    on family, education, grief,
+                    I delivered a heartfelt, bilingual speech centered
+                    on my own experiences navigating family, education, grief,
                     resilience, and liberation through the power of education.
 
                 </p>
@@ -2738,7 +2917,7 @@
                         color:white;
                     ">
 
-                    Watch the Speech →
+                    Watch the full Speech →
 
                 </a>
 
@@ -2809,7 +2988,7 @@
 
                     <p>
 
-                        A multimedia investigation into housing density
+                        A multimedia piece looking into housing density
                         and the growing fight for street parking
                         in Los Angeles' San Fernando Valley.
 
@@ -2856,9 +3035,7 @@
 
                     <p>
 
-                        A multimedia story centered on the workers
-                        whose labor makes major sporting events possible,
-                        from groundskeepers to vendors and security staff.
+                        Coming soon.
 
                     </p>
 
@@ -2870,7 +3047,7 @@
                     href="#"
                     class="project-link">
 
-                    View Project →
+                    View Article →
 
                 </a>
 
@@ -3034,313 +3211,179 @@
 
 
 
-<!-- ==========================================
-     GRAPHIC DESIGN
-=========================================== -->
-
-<section
-    class="design-section"
-    id="design">
-
-
-    <div class="container">
-
-
-        <div class="design-header">
-
-
-            <div>
-
-                <p class="section-label">
-                    04 — Graphic Design
-                </p>
-
-                <h2
-                    class="section-title"
-                    style="margin-bottom:0;">
-
-                    Visual ideas built for people to stop, look, and engage.
-
-                </h2>
-
-            </div>
-
-
-            <p class="design-intro">
-
-                A curated selection of promotional graphics,
-                social media campaigns, event marketing,
-                and visual storytelling created for
-                student organizations and community-focused projects.
-                This gallery is intentionally limited to six pieces
-                so the work stays focused and easy to explore.
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="design-grid">
-
-
-            <!-- ==================================
-                 DESIGN 1 — LBSA FLYER
-            =================================== -->
-
-            <article class="design-card">
-
-                <div class="design-image-wrap">
-
-                    <img
-                        src="images/LBSA-Flyer-01.png"
-                        alt="Graphic design flyer created by Taj Robles for UC Berkeley LBSA"
-                        loading="lazy"
-                    >
-
-                </div>
-
-                <div class="design-info">
-
-                    <span class="design-type">
-                        Graphic Design · LBSA
-                    </span>
-
-                    <h3>
-                        LBSA Campaign Design
-                    </h3>
-
-                    <p>
-                        Promotional creative developed for
-                        UC Berkeley's Latinx Business Student Association
-                        to support event visibility and student engagement.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ==================================
-                 DESIGN 2 — LBSA FLYER
-            =================================== -->
-
-            <article class="design-card">
-
-                <div class="design-image-wrap">
-
-                    <img
-                        src="images/LBSA-Flyer-02.png"
-                        alt="Social media graphic created by Taj Robles for UC Berkeley LBSA"
-                        loading="lazy"
-                    >
-
-                </div>
-
-                <div class="design-info">
-
-                    <span class="design-type">
-                        Social Media · LBSA
-                    </span>
-
-                    <h3>
-                        Digital Marketing Creative
-                    </h3>
-
-                    <p>
-                        Branded social content combining
-                        audience-focused messaging,
-                        visual consistency, and promotional strategy.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ==================================
-                 DESIGN 3 — INTERN RECOGNITION
-                 This is recognition, not a design credit.
-            =================================== -->
-
-            <article class="design-card recognition-card">
-
-                <div class="design-image-wrap">
-
-                    <img
-                        src="images/LBSA-Intern-Spotlight.png"
-                        alt="LBSA Intern of the Semester spotlight recognizing Taj Robles"
-                        loading="lazy"
-                    >
-
-                </div>
-
-                <div class="design-info">
-
-                    <span class="design-type">
-                        Recognition · LBSA
-                    </span>
-
-                    <h3>
-                        Intern of the Semester
-                    </h3>
-
-                    <p>
-                        Recognized for supporting the marketing committee,
-                        mentoring fellow interns, contributing to internal
-                        projects, and documenting events through photography.
-                    </p>
-
-                    <span class="recognition-badge">
-                        Intern Spotlight
-                    </span>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ==================================
-                 DESIGN 4 — FUTURE WORK
-            =================================== -->
-
-            <article class="design-card">
-
-                <div class="design-image-wrap">
-
-                    <div class="design-placeholder">
-
-                        <div class="design-placeholder-number">
-                            04
-                        </div>
-
-                        <p>
-                            Future Graphic Project
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="design-info">
-
-                    <span class="design-type">
-                        Coming Soon
-                    </span>
-
-                    <h3>
-                        Future Design
-                    </h3>
-
-                    <p>
-                        Replace this card with another flyer,
-                        campaign, social graphic, or branded project.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ==================================
-                 DESIGN 5 — FUTURE WORK
-            =================================== -->
-
-            <article class="design-card">
-
-                <div class="design-image-wrap">
-
-                    <div class="design-placeholder">
-
-                        <div class="design-placeholder-number">
-                            05
-                        </div>
-
-                        <p>
-                            Future Graphic Project
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="design-info">
-
-                    <span class="design-type">
-                        Coming Soon
-                    </span>
-
-                    <h3>
-                        Future Design
-                    </h3>
-
-                    <p>
-                        Keep this space ready for a future
-                        marketing campaign or visual storytelling piece.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ==================================
-                 DESIGN 6 — FUTURE WORK
-            =================================== -->
-
-            <article class="design-card">
-
-                <div class="design-image-wrap">
-
-                    <div class="design-placeholder">
-
-                        <div class="design-placeholder-number">
-                            06
-                        </div>
-
-                        <p>
-                            Future Graphic Project
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="design-info">
-
-                    <span class="design-type">
-                        Coming Soon
-                    </span>
-
-                    <h3>
-                        Future Design
-                    </h3>
-
-                    <p>
-                        Add another strong example here as
-                        your creative portfolio continues to grow.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-
+<!-- ============================= -->
+<!-- GRAPHIC DESIGN / CREATIVE WORK -->
+<!-- ============================= -->
+
+<section id="graphics" class="graphics-section">
+
+    <div class="section-heading">
+        <span class="section-kicker">Visual Storytelling</span>
+        <h2>Graphic Design & Creative Work</h2>
+
+        <p>
+            A selection of promotional graphics, event campaigns, 
+            social media content, and community-focused visual storytelling 
+            created through my marketing work with the 
+            <strong>Latinx Business Student Association at UC Berkeley.</strong>
+        </p>
     </div>
 
 
+    <div class="graphics-grid">
+
+        <!-- GRAPHIC 1 -->
+        <article class="graphic-card">
+
+            <div class="graphic-image">
+                <img
+                    src="images/LBSA-Flyer-01.png"
+                    alt="LBSA Exploring Majors and Minors event flyer designed by Taj Robles"
+                    loading="lazy">
+            </div>
+
+            <div class="graphic-info">
+                <span class="graphic-category">Event Marketing</span>
+
+                <h3>Exploring Majors & Minors</h3>
+
+                <p>
+                    Academic event promotion combining notebook-inspired
+                    visuals, campus imagery, photography, and LBSA branding
+                    to create an approachable student-centered campaign.
+                </p>
+            </div>
+
+        </article>
+
+
+        <!-- GRAPHIC 2 -->
+        <article class="graphic-card">
+
+            <div class="graphic-image">
+                <img
+                    src="images/LBSA-Flyer-02.png"
+                    alt="LBSA Pa' Delante From the Classroom to the Game event flyer designed by Taj Robles"
+                    loading="lazy">
+            </div>
+
+            <div class="graphic-info">
+                <span class="graphic-category">Event Promotion</span>
+
+                <h3>Pa' Delante</h3>
+
+                <p>
+                    Speaker-panel campaign highlighting Latinx professionals
+                    in sports, marketing, creative media, and production,
+                    built around UC Berkeley imagery and LBSA's visual identity.
+                </p>
+            </div>
+
+        </article>
+
+
+        <!-- GRAPHIC 3 -->
+        <article class="graphic-card">
+
+            <div class="graphic-image">
+                <img
+                    src="images/LBSA-Flyer-03.png"
+                    alt="LBSA Big Little Reveal photo collage designed by Taj Robles"
+                    loading="lazy">
+            </div>
+
+            <div class="graphic-info">
+                <span class="graphic-category">Community Storytelling</span>
+
+                <h3>Big / Little Reveal</h3>
+
+                <p>
+                    Photo-driven recap highlighting LBSA's mentorship
+                    community through layered photography, branded framing,
+                    typography, and campus imagery.
+                </p>
+            </div>
+
+        </article>
+
+
+        <!-- GRAPHIC 4 -->
+        <article class="graphic-card">
+
+            <div class="graphic-image">
+                <img
+                    src="images/LBSA-Flyer-04.png"
+                    alt="LBSA Art of First Impressions professional etiquette workshop flyer designed by Taj Robles"
+                    loading="lazy">
+            </div>
+
+            <div class="graphic-info">
+                <span class="graphic-category">Professional Development</span>
+
+                <h3>The Art of First Impressions</h3>
+
+                <p>
+                    Professional-development campaign using illustration,
+                    strong information hierarchy, and coordinated typography
+                    to promote networking and career-readiness programming.
+                </p>
+            </div>
+
+        </article>
+
+
+        <!-- GRAPHIC 5 -->
+        <article class="graphic-card">
+
+            <div class="graphic-image">
+                <img
+                    src="images/LBSA-Flyer-05.png"
+                    alt="LBSA and College Liquidation clothing pop-up shop flyer designed by Taj Robles"
+                    loading="lazy">
+            </div>
+
+            <div class="graphic-info">
+                <span class="graphic-category">Promotional Campaign</span>
+
+                <h3>Clothing Pop-Up Shop</h3>
+
+                <p>
+                    Retail-focused promotional design combining collage,
+                    fashion imagery, textured backgrounds, and bold
+                    typography to advertise an on-campus collaboration.
+                </p>
+            </div>
+
+        </article>
+
+
+        <!-- GRAPHIC 6 -->
+        <article class="graphic-card spotlight-card">
+
+            <div class="graphic-image">
+                <img
+                    src="images/LBSA-Intern-Spotlight.png"
+                    alt="LBSA Intern Spotlight recognizing Taj Robles as a marketing intern"
+                    loading="lazy">
+            </div>
+
+            <div class="graphic-info">
+                <span class="graphic-category">Recognition</span>
+
+                <h3>Marketing Intern Spotlight</h3>
+
+                <p>
+                    Recognition from LBSA's marketing team highlighting my
+                    contributions to event photography, creative projects,
+                    intern mentorship, and organization-wide marketing support.
+                </p>
+            </div>
+
+        </article>
+
+    </div>
+
 </section>
-
-
 
 <!-- ==========================================
      SOCIAL STORYTELLING
