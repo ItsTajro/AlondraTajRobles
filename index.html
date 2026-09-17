@@ -25,7 +25,134 @@
 
 
     <style>
+/* ==========================================
+   JOURNALISM / PUBLISHED CLIPS
+========================================== */
 
+.journalism-section {
+    padding: 110px 0;
+}
+
+.journalism-intro {
+    max-width: 760px;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0 0 55px;
+    opacity: 0.8;
+}
+
+
+/* TWO-COLUMN CLIP GRID */
+
+.clips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px 35px;
+}
+
+
+/* INDIVIDUAL CLIP */
+
+.clip-card {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0, 0, 0, 0.18);
+    padding-top: 18px;
+}
+
+
+/* NEWSPAPER IMAGE */
+
+.clip-image-link {
+    display: block;
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+    background: #f2f2f2;
+    margin-bottom: 25px;
+}
+
+.clip-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.clip-image-link:hover .clip-image {
+    transform: scale(1.025);
+    opacity: 0.92;
+}
+
+
+/* TEXT */
+
+.clip-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.clip-type {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.6;
+}
+
+.clip-content h3 {
+    font-size: 25px;
+    line-height: 1.15;
+    margin: 0 0 14px;
+}
+
+.clip-content > p:not(.clip-type) {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0.78;
+}
+
+.clip-content .project-link {
+    margin-top: auto;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .journalism-section {
+        padding: 80px 0;
+    }
+
+    .clips-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .clip-image-link {
+        height: auto;
+        max-height: none;
+    }
+
+    .clip-image {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .clip-content h3 {
+        font-size: 23px;
+    }
+
+}
 
         /* ==========================================
            COLOR PALETTE
@@ -1594,7 +1721,7 @@
 
         .podcast-content p {
 
-            max-width: 650px;
+            max-width: 450px;
 
             margin-bottom: 30px;
 
@@ -2936,278 +3063,323 @@
 
 
 <!-- ==========================================
-     SELECTED WORK
+     JOURNALISM / PUBLISHED WORK
 =========================================== -->
 
-<section id="projects">
-
+<section id="projects" class="journalism-section">
 
     <div class="container">
 
-
         <p class="section-label">
+            03 — Journalism
+        </p>
 
-            03 — Selected Work
+        <h2 class="section-title">
+            Reporting from the newsroom to the field.
+        </h2>
 
+        <p class="journalism-intro">
+            Selected reporting published in <em>The Roundup News</em> at
+            Los Angeles Pierce College. My work spans breaking and campus news,
+            community reporting, sports coverage, and opinion writing.
         </p>
 
 
-        <h2 class="section-title">
-
-            Journalism, multimedia, strategy, and visual storytelling.
-
-        </h2>
+        <div class="clips-grid">
 
 
+            <!-- ======================================
+                 CAMPUS NEWS — SMOKE-FREE CAMPUS
+            ======================================= -->
 
-        <div class="project-grid">
-
-
-
-            <!-- HOUSING -->
-
-            <article class="project-card">
-
-
-                <div>
-
-
-                    <div class="project-type">
-
-                        Interactive Journalism
-
-                    </div>
-
-
-                    <h3>
-
-                        When New Housing Meets Old Streets
-
-                    </h3>
-
-
-                    <p>
-
-                        A multimedia piece looking into housing density
-                        and the growing fight for street parking
-                        in Los Angeles' San Fernando Valley.
-
-                    </p>
-
-
-                </div>
-
+            <article class="clip-card">
 
                 <a
-                    href="#"
-                    class="project-link">
-
-                    View Story →
-
-                </a>
-
-
-            </article>
-
-
-
-            <!-- WORLD CUP -->
-
-            <article class="project-card">
-
-
-                <div>
-
-
-                    <div class="project-type">
-
-                        Multimedia Journalism
-
-                    </div>
-
-
-                    <h3>
-
-                        The Heart Behind the World Cup
-
-                    </h3>
-
-
-                    <p>
-
-                        Coming soon.
-
-                    </p>
-
-
-                </div>
-
-
-                <a
-                    href="#"
-                    class="project-link">
-
-                    View Article →
-
-                </a>
-
-
-            </article>
-
-
-
-            <!-- LATINX REPRESENTATION -->
-
-            <article class="project-card">
-
-
-                <div>
-
-
-                    <div class="project-type">
-
-                        Reporting
-
-                    </div>
-
-
-                    <h3>
-
-                        Who Gets Represented?
-
-                    </h3>
-
-
-                    <p>
-
-                        Reporting on Latinx representation
-                        at UC Berkeley and the experiences
-                        of students whose identities are sometimes
-                        overlooked within broader Latinx campus spaces.
-
-                    </p>
-
-
-                </div>
-
-
-                <a
-                    href="#"
-                    class="project-link">
-
-                    Read Story →
-
-                </a>
-
-
-            </article>
-
-
-
-            <!-- YOURSTRULY -->
-
-            <article class="project-card">
-
-
-                <div>
-
-
-                    <div class="project-type">
-
-                        Investigative Journalism
-
-                    </div>
-
-
-                    <h3>
-
-                        YoursTruly
-
-                    </h3>
-
-
-                    <p>
-
-                        An investigative journalism project examining
-                        consumer complaints, fulfillment issues,
-                        refunds, brand loyalty, and accountability
-                        surrounding an independent apparel company.
-
-                    </p>
-
-
-                </div>
-
-
-                <a
-                    href="#"
-                    class="project-link">
-
-                    Explore Reporting →
-
-                </a>
-
-
-            </article>
-
-
-
-            <!-- PODCAST -->
-
-            <article class="project-card">
-
-
-                <div>
-
-
-                    <div class="project-type">
-
-                        Audio Storytelling
-
-                    </div>
-
-
-                    <h3>
-
-                        Blooming Out the Concrete Jungle
-
-                    </h3>
-
-
-                    <p>
-
-                        An example of my audio and podcast storytelling work,
-                        demonstrating narrative structure,
-                        voice, interviewing,
-                        and digital audio production.
-
-                    </p>
-
-
-                </div>
-
-
-                <a
-                    href="https://www.piercemediaarts.com/kpcradio/blooming-out-the-concrete-junge-ep-3/article_e0904c6a-29fb-41fe-9632-c6e975ee34ef.html"
+                    href="images/Campus News Clip Round Up.png"
                     target="_blank"
-                    class="project-link">
+                    class="clip-image-link">
 
-                    Listen to Podcast →
+                    <img
+                        src="images/Campus News Clip Round Up.png"
+                        alt="Published Roundup News article by Taj Robles about Pierce College students advocating for a smoke-free campus"
+                        class="clip-image">
 
                 </a>
 
+                <div class="clip-content">
+
+                    <p class="clip-type">
+                        CAMPUS NEWS
+                    </p>
+
+                    <h3>
+                        At Pierce College Council meeting, students urge for a smoke-free campus
+                    </h3>
+
+                    <p>
+                        Coverage of student concerns and College Council
+                        discussions surrounding a proposed 100% smoke-free
+                        campus policy.
+                    </p>
+
+                    <a
+                        href="images/Campus News Clip Round Up.png"
+                        target="_blank"
+                        class="project-link">
+
+                        View Published Clip →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 OPINION — PUBLIC TRANSPORTATION
+            ======================================= -->
+
+            <article class="clip-card">
+
+                <a
+                    href="images/Opinion News Clip 2 Round Up.png"
+                    target="_blank"
+                    class="clip-image-link">
+
+                    <img
+                        src="images/Opinion News Clip 2 Round Up.png"
+                        alt="Published Roundup News opinion article by Taj Robles about public transportation"
+                        class="clip-image">
+
+                </a>
+
+                <div class="clip-content">
+
+                    <p class="clip-type">
+                        OPINION
+                    </p>
+
+                    <h3>
+                        Avoid the headaches, ride public
+                    </h3>
+
+                    <p>
+                        An opinion piece examining car-centric cities,
+                        public transportation accessibility, traffic,
+                        walkability, and the benefits of transit investment.
+                    </p>
+
+                    <a
+                        href="images/Opinion News Clip 2 Round Up.png"
+                        target="_blank"
+                        class="project-link">
+
+                        View Published Clip →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 CAMPUS LIFE — VETERANS
+            ======================================= -->
+
+            <article class="clip-card">
+
+                <a
+                    href="images/Campus Life Clip Veterans Round Up.png"
+                    target="_blank"
+                    class="clip-image-link">
+
+                    <img
+                        src="images/Campus Life Clip Veterans Round Up.png"
+                        alt="Published Roundup News article by Taj Robles about Pierce College veterans"
+                        class="clip-image">
+
+                </a>
+
+                <div class="clip-content">
+
+                    <p class="clip-type">
+                        CAMPUS LIFE
+                    </p>
+
+                    <h3>
+                        Developing community through stories
+                    </h3>
+
+                    <p>
+                        Reporting on Pierce College's Veterans Club
+                        and its efforts to create community, resources,
+                        and connection for veteran students on campus.
+                    </p>
+
+                    <a
+                        href="images/Campus Life Clip Veterans Round Up.png"
+                        target="_blank"
+                        class="project-link">
+
+                        View Published Clip →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 SPORTS — SOFTBALL
+            ======================================= -->
+
+            <article class="clip-card">
+
+                <a
+                    href="images/Sports Story Clip Round Up.png"
+                    target="_blank"
+                    class="clip-image-link">
+
+                    <img
+                        src="images/Sports Story Clip Round Up.png"
+                        alt="Published Roundup News softball story by Taj Robles"
+                        class="clip-image">
+
+                </a>
+
+                <div class="clip-content">
+
+                    <p class="clip-type">
+                        SPORTS
+                    </p>
+
+                    <h3>
+                        Cougars inch out win over Brahmas
+                    </h3>
+
+                    <p>
+                        Game coverage following Pierce College softball
+                        in a tightly contested matchup against
+                        Cuesta College.
+                    </p>
+
+                    <a
+                        href="images/Sports Story Clip Round Up.png"
+                        target="_blank"
+                        class="project-link">
+
+                        View Published Clip →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 NEWS — ENROLLMENT & BUDGET
+            ======================================= -->
+
+            <article class="clip-card">
+
+                <a
+                    href="images/Campus Life News Clip Round Up.png"
+                    target="_blank"
+                    class="clip-image-link">
+
+                    <img
+                        src="images/Campus Life News Clip Round Up.png"
+                        alt="Published Roundup News article by Taj Robles about Pierce College enrollment recovery and budget concerns"
+                        class="clip-image">
+
+                </a>
+
+                <div class="clip-content">
+
+                    <p class="clip-type">
+                        NEWS
+                    </p>
+
+                    <h3>
+                        Pierce College Council talks enrollment recovery and risk of budget deficit
+                    </h3>
+
+                    <p>
+                        College Council reporting covering enrollment,
+                        student retention, campus parking concerns,
+                        safety initiatives, and potential budget challenges.
+                    </p>
+
+                    <a
+                        href="images/Campus Life News Clip Round Up.png"
+                        target="_blank"
+                        class="project-link">
+
+                        View Published Clip →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 OPINION — IN-PERSON LEARNING
+            ======================================= -->
+
+            <article class="clip-card">
+
+                <a
+                    href="images/Opinion News Clip Round Up.png"
+                    target="_blank"
+                    class="clip-image-link">
+
+                    <img
+                        src="images/Opinion News Clip Round Up.png"
+                        alt="Published Roundup News opinion article by Taj Robles about in-person learning"
+                        class="clip-image">
+
+                </a>
+
+                <div class="clip-content">
+
+                    <p class="clip-type">
+                        OPINION
+                    </p>
+
+                    <h3>
+                        How to reconnect when the world has shifted its focus
+                    </h3>
+
+                    <p>
+                        An opinion piece examining the value of
+                        in-person learning, classroom interaction,
+                        community, and hands-on education.
+                    </p>
+
+                    <a
+                        href="images/Opinion News Clip Round Up.png"
+                        target="_blank"
+                        class="project-link">
+
+                        View Published Clip →
+                    </a>
+
+                </div>
 
             </article>
 
 
         </div>
 
-
     </div>
 
-
 </section>
-
 
 
 
@@ -3544,7 +3716,7 @@
 
                         <p>
 
-                            Future Reel / TikTok
+                            Interview
 
                         </p>
 
@@ -3798,7 +3970,7 @@
 
         <h2 class="section-title">
 
-            What I bring to the story — and the team behind it.
+            What I can bring to the team.
 
         </h2>
 
@@ -3822,7 +3994,7 @@
 
                 <ul>
 
-                    <li>Reporting</li>
+                    <li>Live Reporting</li>
 
                     <li>Interviewing</li>
 
@@ -3830,7 +4002,7 @@
 
                     <li>AP Style</li>
 
-                    <li>Multimedia Storytelling</li>
+                    <li>Multimedia</li>
 
                     <li>Data Journalism</li>
 
@@ -3859,7 +4031,7 @@
 
                 <ul>
 
-                    <li>Marketing Campaign Planning</li>
+                    <li>Campaign Planning</li>
 
                     <li>Audience Analysis</li>
 
@@ -3898,7 +4070,7 @@
 
                     <li>Project Coordination</li>
 
-                    <li>Event Coordination</li>
+                    <li>Event Planning</li>
 
                     <li>Deadline Management</li>
 
@@ -3926,20 +4098,20 @@
 
                 <h3>
 
-                    Creative + Tools
+                    Creative Tools
 
                 </h3>
 
 
                 <ul>
 
-                    <li>Photography</li>
+                    <li>Photography, Sony Cameras</li>
 
                     <li>Video Editing</li>
 
                     <li>Broadcast Production</li>
 
-                    <li>Adobe Premiere Pro</li>
+                    <li>Adobe Suite</li>
 
                     <li>Photoshop</li>
 
@@ -3951,7 +4123,7 @@
 
                     <li>Datawrapper</li>
 
-                    <li>Flourish</li>
+                    <li>Email Marketing</li>
 
                     <li>Salesforce</li>
 
