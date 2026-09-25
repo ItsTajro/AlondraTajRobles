@@ -887,203 +887,6 @@
 
 
 
-        /* ==========================================
-           FEATURED SPEECH
-        =========================================== */
-
-        .featured {
-
-            background: var(--red);
-
-            color: white;
-
-            position: relative;
-
-            overflow: hidden;
-
-        }
-
-
-        .featured .section-label {
-
-            color: var(--yellow);
-
-        }
-
-
-        .featured-grid {
-
-            display: grid;
-
-            grid-template-columns: .9fr 1.1fr;
-
-            gap: 60px;
-
-            align-items: center;
-
-        }
-
-
-        .featured-number {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(6rem, 15vw, 12rem);
-
-            color: var(--yellow);
-
-            line-height: .8;
-
-        }
-
-
-        .featured-content h3 {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(2.4rem, 5vw, 3.6rem);
-
-            line-height: 1.05;
-
-            margin-bottom: 25px;
-
-        }
-
-
-        .featured-content p {
-
-            font-size: 1.05rem;
-
-            margin-bottom: 22px;
-
-            max-width: 620px;
-
-        }
-
-
-
-        /* ==========================================
-           PROJECTS
-        =========================================== */
-
-        .project-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            gap: 25px;
-
-        }
-
-
-        .project-card {
-
-            min-height: 440px;
-
-            padding: 45px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-            position: relative;
-
-            overflow: hidden;
-
-            transition: .4s;
-
-        }
-
-
-        .project-card:nth-child(1) {
-
-            background: var(--yellow);
-
-        }
-
-
-        .project-card:nth-child(2) {
-
-            background: var(--orange);
-
-            color: white;
-
-        }
-
-
-        .project-card:nth-child(3) {
-
-            background: var(--burgundy);
-
-            color: white;
-
-        }
-
-
-        .project-card:nth-child(4) {
-
-            background: var(--peach);
-
-        }
-
-
-        .project-card:nth-child(5) {
-
-            background: var(--red);
-
-            color: white;
-
-        }
-
-
-        .project-card:hover {
-
-            transform: translateY(-8px);
-
-        }
-
-
-        .project-type {
-
-            text-transform: uppercase;
-
-            letter-spacing: 3px;
-
-            font-size: .7rem;
-
-            font-weight: 700;
-
-        }
-
-
-        .project-card h3 {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: 2.5rem;
-
-            line-height: 1.1;
-
-            margin: 20px 0;
-
-        }
-
-
-        .project-link {
-
-            font-weight: 700;
-
-            font-size: .9rem;
-
-            margin-top: 25px;
-
-        }
-
-
-
 
         /* ==========================================
            GRAPHIC DESIGN
@@ -2035,6 +1838,263 @@
 
         }
 
+    
+/* ==========================================
+   GRADUATION SPEECH FEATURE — REDESIGN
+   Added 09/25/2026
+========================================== */
+
+.grad-feature {
+    background: var(--cream);
+    padding: 90px 0;
+}
+
+.grad-feature-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.grad-feature-photo {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--dark);
+}
+
+.grad-feature-photo img {
+    display: block;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.grad-photo-label {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 18px;
+    background: var(--red);
+    color: var(--white);
+}
+
+.grad-photo-label span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.grad-photo-label strong {
+    font-size: 14px;
+}
+
+.grad-feature-copy {
+    width: 100%;
+    max-width: 620px;
+}
+
+.grad-eyebrow {
+    margin: 0 0 20px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.grad-title {
+    margin: 0 0 25px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(56px, 5.5vw, 84px);
+    line-height: .95;
+    letter-spacing: -2px;
+    color: var(--dark);
+}
+
+.grad-title em {
+    color: var(--red);
+    font-weight: inherit;
+}
+
+.grad-subtitle {
+    margin: 0 0 25px;
+    max-width: 570px;
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+.grad-description {
+    margin: 0 0 16px;
+    max-width: 580px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--dark);
+}
+
+.grad-social {
+    margin: 32px 0;
+    padding: 22px 0;
+    border-top: 1px solid rgba(34, 23, 19, .18);
+    border-bottom: 1px solid rgba(34, 23, 19, .18);
+}
+
+.grad-social-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(34, 23, 19, .62);
+    text-transform: uppercase;
+}
+
+.grad-social-label span {
+    display: inline-block;
+    padding: 6px 9px;
+    background: var(--dark);
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.grad-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.grad-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.grad-stat strong {
+    font-family: "Playfair Display", serif;
+    font-size: 31px;
+    line-height: 1;
+    color: var(--red);
+}
+
+.grad-stat span {
+    margin-top: 7px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(34, 23, 19, .7);
+}
+
+.grad-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px 23px;
+    background: var(--red);
+    color: var(--white);
+    border: 2px solid var(--red);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.grad-button:hover {
+    background: transparent;
+    color: var(--red);
+    transform: translateY(-2px);
+}
+
+.grad-button span {
+    font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+    .grad-feature-grid {
+        gap: 40px;
+    }
+
+    .grad-feature-photo img {
+        height: 570px;
+    }
+
+    .grad-title {
+        font-size: 58px;
+    }
+
+    .grad-subtitle {
+        font-size: 24px;
+    }
+
+    .grad-stats {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 22px;
+    }
+}
+
+@media (max-width: 760px) {
+    .grad-feature {
+        padding: 60px 0;
+    }
+
+    .grad-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .grad-feature-photo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .grad-photo-label {
+        left: 14px;
+        bottom: 14px;
+        padding: 11px 14px;
+    }
+
+    .grad-feature-copy {
+        max-width: 100%;
+    }
+
+    .grad-title {
+        font-size: 50px;
+    }
+
+    .grad-subtitle {
+        font-size: 23px;
+    }
+
+    .grad-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .grad-title {
+        font-size: 43px;
+    }
+
+    .grad-subtitle {
+        font-size: 21px;
+    }
+
+    .grad-button {
+        width: 100%;
+    }
+}
+
     </style>
 
 </head>
@@ -2129,9 +2189,9 @@
 
         <p class="hero-description">
 
-            Aspiring multimedia journalist, communications professional,
+            Multimedia journalist, communications professional,
             marketer, and digital storyteller creating work at
-            the intersection of
+            the intersections of
 
             <strong>
                 culture, community, strategy, and visual storytelling.
@@ -2144,11 +2204,11 @@
 
             <span>UC Berkeley Alum</span>
 
-            <span>Media Studies</span>
+            <span>Storytelling</span>
 
-            <span>Journalism</span>
+            <span>Communications</span>
 
-            <span>Marketing</span>
+            <span>Creative Media</span>
 
             <span>Based in Los Angeles, CA</span>
 
@@ -2203,7 +2263,7 @@
 
         <div class="stat">
 
-            <h2>1.5M+</h2>
+            <h2>2.5M+</h2>
 
             <p>Content Views Across Socials</p>
 
@@ -2233,195 +2293,104 @@
 </section>
 
 
-
 <!-- ==========================================
      ABOUT
 =========================================== -->
 
 <section id="about">
 
-
     <div class="container">
 
-
         <p class="section-label">
-
             01 — About
-
         </p>
 
-
         <h2 class="section-title">
-
             Stories matter most when people can see themselves in them.
-
         </h2>
-
-
 
         <div class="about-grid">
 
-
-
+            <!-- LEFT: ABOUT COPY -->
             <div class="about-text">
 
-
                 <p class="about-lead">
-
-                    I'm an aspiring multimedia storyteller interested in
-                    the people, communities, and experiences
-                    that often exist outside the center of a camera frame.
-
+                    I'm Taj Robles, a Los Angeles-based
+                    <strong>multimedia storyteller and communications professional</strong>
+                    interested in the people, communities, and experiences
+                    that often exist outside the center of the camera frame.
                 </p>
 
-
                 <p>
-
-                    My work moves across various mediums such as journalism, communications,
-                    marketing, social media, photography, video,
-                    broadcasting, podcasting, and interactive storytelling.
-
+                    My work sits at the intersection of
+                    <strong>journalism, visual storytelling, marketing, and digital media.</strong>
+                    From reporting community stories and producing social campaigns
+                    to photographing events, creating multimedia projects, and working
+                    behind a broadcast camera, I use different mediums to find the
+                    strongest way to tell each story.
                 </p>
 
-
                 <p>
-
-                    At UC Berkeley, I've developed stories exploring
-                    community, identity, housing, labor issues, culture,
-                    and representation while also producing campaigns,
-                    content, and communications for different student organizations
-                    across digital platforms.
-
+                    My journalism background shapes how I approach my work:
+                    <em>ask questions, listen closely, find the human connection, and
+                    understand the audience.</em> I've carried that approach into various fields in
+                    communications, marketing, production, and creative projects
+                    at UC Berkeley and beyond.
                 </p>
 
-
-                <p>
-
-                    My professional experience also extends beyond
-                    media production into project coordination,
-                    administrative operations, reporting,
-                    audience engagement, records management,
-                    and cross-team collaborations.
-
-                </p>
-
-
-                <p>
-
-                    Whether I'm conducting on the streets conducting an interview,
-                    building an interactive story behind my computer,
-                    producing a marketing campaign,
-                    managing deadline-driven projects,
-                    working behind a broadcast camera,
-                    or standing behind a podium speaking to thousands,
-                    my goal remains the same:
-
+                <p class="about-closing">
+                    Whether the final story lives in an article, a campaign,
+                    a photograph, a video, or on a stage, my goal remains the same:
                     <strong>
-                        I want to make people feel <em>something.</em>
+                        create something that connects with people and makes them
+                        feel <em>something.</em>
                     </strong>
-
                 </p>
-
 
             </div>
 
 
-
+            <!-- RIGHT: PHOTO + INFO -->
             <div class="about-visual">
-
 
                 <div class="about-image-wrap">
 
-
-                    <!--
-                    YOUR FOLDER STRUCTURE:
-
-                    Alondra Taj Robles Portfolio/
-                    ├── index.html
-                    └── images/
-                        └── taj-about.png
-                    -->
-
-
                     <img
                         src="images/taj-about.png"
-                        alt="Portrait of Alondra Taj Robles"
+                        alt="Portrait of Taj Robles"
                         class="about-image"
                     >
 
-
                 </div>
-
 
 
                 <div class="about-card">
 
+                    <p class="about-card-label">
+                        EDUCATION
+                    </p>
 
                     <h3>
-
-                        Education
-
+                        UC Berkeley
                     </h3>
 
-
                     <p>
-
-                        <strong>
-                            University of California, Berkeley
-                        </strong>
-
-                    </p>
-
-
-                    <p>
-
                         B.A. Media Studies
-
-                    </p>
-
-
-                    <p>
-
-                        Emphasis in <em>Digital Studies</em>
-
-                    </p>
-
-
-                    <p>
-
+                        <span>·</span>
                         Minor in Journalism
-
                     </p>
 
-
-                    <br>
-
-
-                    <p>
-
-                        Class of 2026
-
+                    <p class="about-card-meta">
+                        Digital Studies · Class of 2026
                     </p>
-
-
-                    <p>
-
-                        Berkeley, California
-
-                    </p>
-
 
                 </div>
 
-
             </div>
-
 
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -2446,11 +2415,11 @@
         </p>
 
 
-        <h2 class="section-title">
+        <h1 class="section-title">
 
             Building where creativity meets strategy, organization, and execution.
 
-        </h2>
+        </h1>
 
 
 
@@ -2463,7 +2432,7 @@
 
             <div class="experience-date">
 
-                August 2025 — Present
+                August 2025 — August 2026
 
             </div>
 
@@ -2489,7 +2458,7 @@
 
                     Managed communications, digital assets,
                     and accessibility-focused projects across
-                    a fast-moving research organization.
+                    a fast-moving research labor organization.
 
                     Conducted quality assurance and accessibility
                     review for approximately 30 public-facing videos,
@@ -2508,7 +2477,7 @@
                     </span>
 
                     <span class="tag">
-                        Project Coordination
+                        Detail-Oriented
                     </span>
 
                     <span class="tag">
@@ -2577,14 +2546,14 @@
                     Developed and executed multimedia marketing
                     campaigns across our social media and internal platforms,
                     creating event graphics, apparel designs,
-                    photographing 20+ events, video, doing interviews,
-                    and aiding with promotional assets.
+                    photographing 30+ events, video, doing interviews,
+                    and aiding with promotional assets for the club.
 
                     Helped generate more than 100K social media views,
                     coordinated messaging across student teams,
                     tracked engagement data,
-                    and supported outreach, partnerships,
-                    programming, and overall brand development.
+                    and supported outreach initiatives, partnerships,
+                    programming, and overall brand development. Also led training presentations on photography and video best practices for memebers.
 
                 </p>
 
@@ -2666,7 +2635,7 @@
 
                 <p>
 
-                    Supported strategic outreach and community
+                    Supported strategic outreach campaigns and community
                     engagement initiatives by developing
                     audience-facing communications,
                     event invitations, social media content,
@@ -2674,7 +2643,8 @@
 
                     Helped translate complex topics surrounding higher education into accessible
                     messaging while supporting programming focused
-                    on access, representation, and student engagement.
+                    on access, representation, and student engagement. Main student speaker panelist 
+                    speaking on my experiences with higher education pathways. 
 
                 </p>
 
@@ -2690,11 +2660,11 @@
                     </span>
 
                     <span class="tag">
-                        Event Promotion
+                        Panelist
                     </span>
 
                     <span class="tag">
-                        Presentations
+                        Presentation/Decks
                     </span>
 
                     <span class="tag">
@@ -2750,7 +2720,7 @@
 
                     Manage administrative and financial operations
                     in a high-volume retail environment,
-                    including Kronos timekeeping,
+                    including Kronos/My Time timekeeping,
                     weekly payroll, cash reporting,
                     financial documentation,
                     employee support, and confidential records.
@@ -2771,7 +2741,7 @@
                     </span>
 
                     <span class="tag">
-                        Kronos
+                        Kronos/ My Time
                     </span>
 
                     <span class="tag">
@@ -2791,7 +2761,7 @@
                     </span>
 
                     <span class="tag">
-                        Training and Onboarding
+                        Associate Training and Onboarding
                     </span>
 
                 </div>
@@ -2823,7 +2793,7 @@
 
                 <h3>
 
-                    Broadcasting Intern
+                    Live Broadcasting Intern
 
                 </h3>
 
@@ -2845,7 +2815,7 @@
 
                     Adapted quickly in a live production environment
                     while helping deliver engaging visual coverage
-                    for streaming audiences.
+                    for streaming audiences. Created social media videos across team socials.
 
                 </p>
 
@@ -2870,6 +2840,10 @@
 
                     <span class="tag">
                         Sports Interviews
+                    </span>
+
+                     <span class="tag">
+                        Social Media Strategy
                     </span>
 
                 </div>
@@ -2923,7 +2897,7 @@
 
                     I also coordinate creative concepts and projects
                     while building opportunities for students
-                    to develop practical media experience.
+                    to develop practical media experience. Built for entry level media enthusiast of all backgrounds!
 
                 </p>
 
@@ -2974,92 +2948,108 @@
      FEATURED GRADUATION SPEECH
 =========================================== -->
 
-<section class="featured">
-
+<section class="grad-feature">
 
     <div class="container">
 
+        <div class="grad-feature-grid">
 
-        <p class="section-label">
+            <!-- LEFT: SPEECH IMAGE -->
+            <div class="grad-feature-photo">
 
-            Featured Story
+                <img
+                    src="images/Grad-Speech.jpg"
+                    alt="Taj Robles delivering a speech at UC Berkeley's 2026 Chicanx/Latinx Graduation"
+                >
 
-        </p>
-
-
-
-        <div class="featured-grid">
-
-
-            <div>
-
-
-                <div class="featured-number">
-
-                    485K+
-
+                <div class="grad-photo-label">
+                    <span>UC BERKELEY · 2026</span>
+                    <strong>Chicanx/Latinx Graduation</strong>
                 </div>
-
 
             </div>
 
 
+            <!-- RIGHT: STORY -->
+            <div class="grad-feature-copy">
 
-            <div class="featured-content">
+                <p class="grad-eyebrow">
+                    Featured Story
+                </p>
 
+                <h2 class="grad-title">
+                    3 Pilares,<br>
+                    <em>3 Pillars.</em>
+                </h2>
 
-                <h3>
-
+                <h3 class="grad-subtitle">
                     A graduation speech that traveled far beyond UC Berkeley's campus.
-
                 </h3>
 
-
-                <p>
-
-                    Was selected as a student speaker for
-                    UC Berkeley's 2026 Chicanx/Latinx Graduation,
-                    I delivered a heartfelt, bilingual speech centered
-                    on my own experiences navigating family, education, grief,
-                    resilience, and liberation through the power of education.
-
+                <p class="grad-description">
+                    Selected as a student speaker for UC Berkeley's 2026
+                    Chicanx/Latinx Graduation, I delivered my speech
+                    <strong>“3 Pilares, 3 Pillars,”</strong>
+                    a bilingual speech exploring family, dealing with grief, resilience,
+                    and the liberating power of education.
                 </p>
 
-
-                <p>
-
-                    My speech later reached hundreds of thousands
-                    of viewers online, showing me firsthand
-                    how one deeply personal story can become a shared one inspiring thousands.
-
+                <p class="grad-description">
+                    After the ceremony, my speech found a second audience
+                    online—turning my deeply personal story into a shared
+                    experience that reached and inspired hundreds of thousands of people.
                 </p>
 
+                <div class="grad-social">
+
+                    <div class="grad-social-label">
+                        <span>TikTok</span>
+                        Social Impact
+                    </div>
+
+                    <div class="grad-stats">
+
+                        <div class="grad-stat">
+                            <strong>485K+</strong>
+                            <span>Views</span>
+                        </div>
+
+                        <div class="grad-stat">
+                            <strong>80.7K</strong>
+                            <span>Likes</span>
+                        </div>
+
+                        <div class="grad-stat">
+                            <strong>1.7K+</strong>
+                            <span>Comments</span>
+                        </div>
+
+                        <div class="grad-stat">
+                            <strong>5.7K+</strong>
+                            <span>Saves</span>
+                        </div>
+
+                    </div>
+
+                </div>
 
                 <a
                     href="https://www.tiktok.com/@itstajro/video/7641481524684147998"
                     target="_blank"
-                    class="button"
-                    style="
-                        border-color:white;
-                        color:white;
-                    ">
-
-                    Watch the full Speech →
-
+                    rel="noopener noreferrer"
+                    class="grad-button"
+                >
+                    Watch the Full Speech!
+                    <span>→</span>
                 </a>
-
 
             </div>
 
-
         </div>
-
 
     </div>
 
-
 </section>
-
 
 
 <!-- ==========================================
