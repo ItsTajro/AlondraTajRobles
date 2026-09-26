@@ -25,6 +25,470 @@
 
 
     <style>
+
+
+/* ==========================================
+   PODCAST / AUDIO — SIMPLIFIED
+=========================================== */
+
+.audio-feature {
+    background: #f8ead8;
+    padding: 80px 0;
+}
+
+
+/* ==========================================
+   MAIN CARD
+=========================================== */
+
+.audio-card {
+    display: grid;
+
+    grid-template-columns:
+        220px
+        minmax(0, 1.1fr)
+        minmax(280px, 0.9fr);
+
+    margin-top: 40px;
+
+    background: #ffffff;
+
+    border-top: 6px solid #d7192d;
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==========================================
+   MICROPHONE ART
+=========================================== */
+
+.audio-art {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 400px;
+
+    padding: 30px;
+
+    background: #090909;
+
+    overflow: hidden;
+}
+
+
+/* RED SOUND LINES */
+
+.audio-lines {
+    position: absolute;
+
+    width: 180px;
+    height: 4px;
+
+    background: #d7192d;
+
+    top: 50%;
+
+    transform: rotate(-4deg);
+}
+
+
+.audio-lines::before,
+.audio-lines::after {
+    content: "";
+
+    position: absolute;
+    left: 20px;
+
+    width: 140px;
+    height: 4px;
+
+    background: #d7192d;
+}
+
+
+.audio-lines::before {
+    top: -20px;
+
+    transform: rotate(8deg);
+}
+
+
+.audio-lines::after {
+    top: 20px;
+
+    transform: rotate(-8deg);
+}
+
+
+/* MIC */
+
+.audio-mic {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 115px;
+    height: 115px;
+
+    background: #b90000;
+
+    font-size: 58px;
+
+    transform: rotate(-4deg);
+}
+
+
+/* KPCRADIO */
+
+.audio-station {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   PODCAST INFORMATION
+=========================================== */
+
+.audio-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 45px;
+}
+
+
+.audio-label {
+    margin: 0 0 15px;
+
+    color: #d7192d;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+.audio-title {
+    max-width: 450px;
+
+    margin: 0 0 20px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 4vw, 54px);
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+
+    color: #111111;
+}
+
+
+.audio-title em {
+    color: #d7192d;
+
+    font-weight: inherit;
+}
+
+
+.audio-description {
+    max-width: 430px;
+
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.65;
+
+    color: #555555;
+}
+
+
+/* HOST CREDIT */
+
+.audio-credit {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 25px;
+}
+
+
+.audio-credit span {
+    margin-bottom: 3px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #888888;
+}
+
+
+.audio-credit strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    color: #111111;
+}
+
+
+/* ==========================================
+   FEATURED EPISODE
+=========================================== */
+
+.audio-episode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 45px;
+
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+.audio-episode-label {
+    margin: 0 0 8px;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #888888;
+}
+
+
+.audio-episode-number {
+    margin-bottom: 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    color: #d7192d;
+}
+
+
+.audio-episode h3 {
+    max-width: 360px;
+
+    margin: 0 0 14px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+    line-height: 1.1;
+
+    color: #111111;
+}
+
+
+.audio-episode p {
+    max-width: 350px;
+
+    margin: 0 0 22px;
+
+    font-size: 13px;
+    line-height: 1.55;
+
+    color: #666666;
+}
+
+
+/* ==========================================
+   BUTTON
+=========================================== */
+
+.audio-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: fit-content;
+
+    padding: 13px 18px;
+
+    background: #d7192d;
+    color: #ffffff;
+
+    border: 2px solid #d7192d;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+
+.audio-button:hover {
+    background: transparent;
+
+    color: #d7192d;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   SKILLS
+=========================================== */
+
+.audio-skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.audio-skills span {
+    padding: 7px 12px;
+
+    border: 1px solid rgba(0, 0, 0, 0.18);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #555555;
+}
+
+
+/* ==========================================
+   TABLET
+=========================================== */
+
+@media (max-width: 950px) {
+
+    .audio-card {
+        grid-template-columns: 180px 1fr;
+    }
+
+
+    .audio-art {
+        grid-row: span 2;
+
+        min-height: 500px;
+    }
+
+
+    .audio-main {
+        padding: 35px;
+    }
+
+
+    .audio-episode {
+        padding: 35px;
+
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+=========================================== */
+
+@media (max-width: 650px) {
+
+    .audio-feature {
+        padding: 60px 0;
+    }
+
+
+    .audio-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .audio-art {
+        grid-row: auto;
+
+        min-height: 230px;
+    }
+
+
+    .audio-station {
+        left: 20px;
+        bottom: 20px;
+    }
+
+
+    .audio-main {
+        padding: 30px;
+    }
+
+
+    .audio-title {
+        font-size: 40px;
+    }
+
+
+    .audio-episode {
+        padding: 30px;
+
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+=========================================== */
+
+@media (max-width: 450px) {
+
+    .audio-title {
+        font-size: 36px;
+    }
+
+
+    .audio-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}
 /* ==========================================
    JOURNALISM / PUBLISHED CLIPS
 ========================================== */
@@ -3385,7 +3849,7 @@
 
         <p>
             A selection of promotional graphics, event campaigns, 
-            social media content, and community-focused visual storytelling 
+            social media content, and community-focused visual storytelling I contributed to and/or
             created through my marketing work with the 
             <strong>Latinx Business Student Association at UC Berkeley.</strong>
         </p>
@@ -3544,393 +4008,102 @@
         </article>
 
     </div>
-<!-- SOCIAL STORYTELLING SECTION TEMPORARILY HIDDEN
 
-<section
-    class="social-work"
-    id="social">
-</section>
 
 <!-- ==========================================
-     SOCIAL STORYTELLING
+     PODCAST / AUDIO STORYTELLING
 =========================================== -->
 
-<section
-    class="social-work"
-    id="social">
-
+<section class="audio-feature" id="podcast">
 
     <div class="container">
 
+        <p class="section-label">
+            06 — Podcast / Audio Storytelling
+        </p>
+
+        <h2 class="section-title">
+            Stories you can hear.
+        </h2>
 
 
-        <div class="social-header">
+        <!-- PODCAST CARD -->
+        <div class="audio-card">
 
 
-            <div>
+            <!-- MICROPHONE -->
+            <div class="audio-art">
 
+                <div class="audio-lines"></div>
 
-                <p class="section-label">
+                <div class="audio-mic">
+                    🎙
+                </div>
 
-                    05 — Social Storytelling
-
-                </p>
-
-
-                <h2
-                    class="section-title"
-                    style="margin-bottom:0;">
-
-                    Stories made for the scroll.
-
-                </h2>
-
+                <span class="audio-station">
+                    KPCRADIO
+                </span>
 
             </div>
 
 
-
-            <p class="social-intro">
-
-                Journalism doesn't always begin with a headline.
-
-                Sometimes it starts with a camera,
-                a moment, and a story worth stopping for.
-
-                This is a collection of my short-form video,
-                social media, reporting,
-                marketing, and creative work.
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="video-grid">
-
-
-
-            <!-- ==================================
-                 VIDEO 1 — VIRAL SPEECH
-            =================================== -->
-
-            <article class="video-card">
-
-
-                <div class="video-frame">
-
-
-                    <blockquote
-                        class="tiktok-embed"
-                        cite="https://www.tiktok.com/@itstajro/video/7641481524684147998"
-                        data-video-id="7641481524684147998">
-
-
-                        <section>
-
-
-                            <a
-                                target="_blank"
-                                title="@itstajro"
-                                href="https://www.tiktok.com/@itstajro">
-
-                                @itstajro
-
-                            </a>
-
-
-                        </section>
-
-
-                    </blockquote>
-
-
-                </div>
-
-
-
-                <div class="video-info">
-
-
-                    <span class="video-platform">
-
-                        TikTok · UC Berkeley
-
-                    </span>
-
-
-                    <h3>
-
-                        3 Pilares, 3 Pillars
-
-                    </h3>
-
-
-                    <p>
-
-                        My bilingual UC Berkeley
-                        Chicanx/Latinx Graduation speech explored
-                        family, grief, education,
-                        resilience, and liberation.
-
-                        The speech reached hundreds of thousands
-                        of viewers across social media.
-
-                    </p>
-
-
-                </div>
-
-
-            </article>
-
-
-
-            <!-- ==================================
-                 VIDEO 2
-            =================================== -->
-
-            <article class="video-card">
-
-
-                <div class="placeholder-frame">
-
-
-                    <div class="video-placeholder">
-
-
-                        <div class="video-placeholder-number">
-
-                            02
-
-                        </div>
-
-
-                        <p>
-
-                            Interview
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="video-info">
-
-
-                    <span class="video-platform">
-
-                        Instagram / TikTok
-
-                    </span>
-
-
-                    <h3>
-
-                        Future Video Project
-
-                    </h3>
-
-
-                    <p>
-
-                        This space is ready for a social campaign,
-                        interview, event recap,
-                        marketing project,
-                        or other short-form story.
-
-                    </p>
-
-
-                </div>
-
-
-            </article>
-
-
-
-            <!-- ==================================
-                 VIDEO 3
-            =================================== -->
-
-            <article class="video-card">
-
-
-                <div class="placeholder-frame">
-
-
-                    <div class="video-placeholder">
-
-
-                        <div class="video-placeholder-number">
-
-                            03
-
-                        </div>
-
-
-                        <p>
-
-                            Future Reel / TikTok
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="video-info">
-
-
-                    <span class="video-platform">
-
-                        Instagram / TikTok
-
-                    </span>
-
-
-                    <h3>
-
-                        Future Video Project
-
-                    </h3>
-
-
-                    <p>
-
-                        Use this space for journalism,
-                        broadcast work,
-                        branded content,
-                        event coverage,
-                        or another creative project.
-
-                    </p>
-
-
-                </div>
-
-
-            </article>
-
-
-        </div>
-
-
-
-        <div class="social-buttons">
-
-
-            <a
-                href="https://www.tiktok.com/@itstajro"
-                target="_blank"
-                class="button button-primary">
-
-                View TikTok ↗
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-</section>
-
-END SOCIAL STORYTELLING SECTION -->
-
-<!-- ==========================================
-     PODCAST FEATURE
-=========================================== -->
-
-<section
-    class="podcast-section"
-    id="podcast">
-
-
-    <div class="container">
-
-
-
-        <div class="podcast-card">
-
-
-
-            <div class="podcast-art">
-
-
-                <div class="podcast-icon">
-
-                    ◉
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="podcast-content">
-
-
-                <p class="section-label">
-
-                    06 — Audio Storytelling
-
+            <!-- PODCAST INFO -->
+            <div class="audio-main">
+
+                <p class="audio-label">
+                    Original Audio Series
                 </p>
 
-
-                <h3>
-
-                    Blooming Out the Concrete Jungle
-
+                <h3 class="audio-title">
+                    Blooming Out the
+                    <em>Concrete Jungle.</em>
                 </h3>
 
-
-                <p>
-
-                    Audio gives storytelling a different kind of intimacy.
-
-                    This podcast example highlights my experience
-                    working with voice, narrative structure,
-                    interviews, and digital audio storytelling.
-
+                <p class="audio-description">
+                    An interview series exploring the lives of
+                    dreamers and entrepreneurs who turned their
+                    passions into reality.
                 </p>
 
-
-                <div>
-
-
-                    <a
-                        href="https://www.piercemediaarts.com/kpcradio/blooming-out-the-concrete-junge-ep-3/article_e0904c6a-29fb-41fe-9632-c6e975ee34ef.html"
-                        target="_blank"
-                        class="button"
-                        style="
-                            border-color:white;
-                            color:white;
-                        ">
-
-                        Listen to the Episode →
-
-                    </a>
-
-
+                <div class="audio-credit">
+                    <span>Hosted & Produced by</span>
+                    <strong>Alondra Taj Robles</strong>
                 </div>
 
+            </div>
+
+
+            <!-- FEATURED EPISODE -->
+            <div class="audio-episode">
+
+                <p class="audio-episode-label">
+                    Featured Episode
+                </p>
+
+                <div class="audio-episode-number">
+                    EP. 04
+                </div>
+
+                <h3>
+                    Finding balance between music and teaching.
+                </h3>
+
+                <p>
+                    A conversation with Ashley Granillo about
+                    balancing her passion for music with a career
+                    in education.
+                </p>
+
+                <a
+                    href="https://www.piercemediaarts.com/kpcradio/blooming-out-the-concrete-junge-ep-4/article_e0904c6a-29fb-41fe-9632-c6e975ee34ef.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="audio-button">
+
+                    Listen to Episode
+                    <span>↗</span>
+
+                </a>
 
             </div>
 
@@ -3938,13 +4111,20 @@ END SOCIAL STORYTELLING SECTION -->
         </div>
 
 
+        <!-- SKILLS / ROLES -->
+        <div class="audio-skills">
+
+            <span>Hosting</span>
+            <span>Interviewing</span>
+            <span>Audio Production</span>
+            <span>Story Development</span>
+            <span>Podcasting</span>
+
+        </div>
+
     </div>
 
-
 </section>
-
-
-
 <!-- ==========================================
      SKILLS
 =========================================== -->
